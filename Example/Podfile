@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LWLayoutEngineer_Example' do
+  pod 'LWLayoutEngineer', :path => '../'
+
+  target 'LWLayoutEngineer_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
