@@ -1,0 +1,6 @@
+framework module Pods_LWLayoutEngineer_Tests {
+  umbrella header "Pods-LWLayoutEngineer_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

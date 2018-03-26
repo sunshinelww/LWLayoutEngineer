@@ -1,0 +1,22 @@
+{
+  "name": "LWLayoutEngineer",
+  "version": "0.1.0",
+  "summary": "A short description of LWLayoutEngineer.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/13517248639@163.com/LWLayoutEngineer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "13517248639@163.com": "liweiweisunshinelww@didichuxing.com"
+  },
+  "source": {
+    "git": "https://github.com/13517248639@163.com/LWLayoutEngineer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LWLayoutEngineer/Classes/**/*"
+}

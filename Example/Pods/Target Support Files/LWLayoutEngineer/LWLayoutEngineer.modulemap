@@ -1,0 +1,6 @@
+framework module LWLayoutEngineer {
+  umbrella header "LWLayoutEngineer-umbrella.h"
+
+  export *
+  module * { export * }
+}
