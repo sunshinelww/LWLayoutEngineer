@@ -18,5 +18,14 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "LWLayoutEngineer/Classes/**/*"
+  "subspecs": [
+    {
+      "name": "Core",
+      "public_header_files": [
+        "LWLayoutEngineer/Classes/CoreSource/YogaCore/*.h",
+        "LWLayoutEngineer/Classes/CoreSource/YogaKit/*.h"
+      ],
+      "source_files": "LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,m}"
+    }
+  ]
 }

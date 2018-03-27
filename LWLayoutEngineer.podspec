@@ -30,7 +30,13 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'LWLayoutEngineer/Classes/**/*'
+  s.subspec 'Core' do |core|
+      core.public_header_files = [
+        'LWLayoutEngineer/Classes/CoreSource/YogaCore/*.h',
+        'LWLayoutEngineer/Classes/CoreSource/YogaKit/*.h',
+      ]
+      core.source_files = 'LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,m}'
+  end
   
   # s.resource_bundles = {
   #   'LWLayoutEngineer' => ['LWLayoutEngineer/Assets/*.png']

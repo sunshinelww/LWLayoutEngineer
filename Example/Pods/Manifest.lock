@@ -4,7 +4,9 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - LWLayoutEngineer (0.1.0)
+  - LWLayoutEngineer (0.1.0):
+    - LWLayoutEngineer/Core (= 0.1.0)
+  - LWLayoutEngineer/Core (0.1.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -16,7 +18,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  LWLayoutEngineer: 4a64f9b24bb05e53bcae70b94dd4029fafde6dfb
+  LWLayoutEngineer: 5afedac2fc06f6c15f07f65e0147b03fc920bbd2
 
 PODFILE CHECKSUM: 594a6674629589bed4a911bfaff4b3308271e3fe
 

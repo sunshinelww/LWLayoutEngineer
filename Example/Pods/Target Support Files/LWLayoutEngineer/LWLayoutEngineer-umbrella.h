@@ -10,6 +10,11 @@
 #endif
 #endif
 
+#import "YGEnums.h"
+#import "YGMacros.h"
+#import "YGNodeList.h"
+#import "Yoga.h"
+#import "ASTraitCollection.h"
 
 FOUNDATION_EXPORT double LWLayoutEngineerVersionNumber;
 FOUNDATION_EXPORT const unsigned char LWLayoutEngineerVersionString[];
