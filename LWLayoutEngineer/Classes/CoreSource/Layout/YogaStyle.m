@@ -26,7 +26,7 @@ static YGConfigRef globalConfig;
     YGNodeRef _yogaNode;
 }
 
-@dynamic flexDirection,positionType,flexWrap,justifyContent,alignItem,alignContent,alignSelf;
+@dynamic flexDirection,position,flexWrap,justifyContent,alignItem,alignContent,alignSelf;
 @dynamic flexGrow,flexShrink,flexBasis;
 
 + (void)initialize{

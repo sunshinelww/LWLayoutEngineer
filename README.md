@@ -22,7 +22,7 @@ pod 'LWLayoutEngineer'
 
 ## Author
 
-13517248639@163.com, liweiweisunshinelww@didichuxing.com
+13517248639@163.com
 
 ## License
 
