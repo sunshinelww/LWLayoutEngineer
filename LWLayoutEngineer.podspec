@@ -37,6 +37,11 @@ TODO: Add long description of the pod here.
       ]
       core.source_files = 'LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,m}'
   end
+
+  s.subspec 'Base' do |base|
+  	base.public_header_files = 'LWLayoutEngineer/Classes/Base/*.h'
+  	base.source_files = 'LWLayoutEngineer/Classes/Base/*.{h,c,m}'
+  end
   
   # s.resource_bundles = {
   #   'LWLayoutEngineer' => ['LWLayoutEngineer/Assets/*.png']

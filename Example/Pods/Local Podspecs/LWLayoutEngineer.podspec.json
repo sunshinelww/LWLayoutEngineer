@@ -26,6 +26,11 @@
         "LWLayoutEngineer/Classes/CoreSource/YogaKit/*.h"
       ],
       "source_files": "LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,m}"
+    },
+    {
+      "name": "Base",
+      "public_header_files": "LWLayoutEngineer/Classes/Base/*.h",
+      "source_files": "LWLayoutEngineer/Classes/Base/*.{h,c,m}"
     }
   ]
 }

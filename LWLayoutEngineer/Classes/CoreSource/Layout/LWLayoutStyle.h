@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 @class LWLayoutStyle;
 @class LWLayout;
+@class YogaStyle;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,9 +25,9 @@ typedef NS_ENUM(NSUInteger, LWLayoutElementType) {
 /**
  * 定义元素的布局能力
  **/
-@protocol LWLayoutable
+@protocol LWLayoutable <NSObject>
 
-@property (nonatomic, assign, readonly) LWLayoutElementType *layoutElementType;
+@property (nonatomic, assign, readonly) LWLayoutElementType layoutElementType;
 
 @property (nonatomic, strong, readonly) LWLayoutStyle *layoutStyle;
 
@@ -44,7 +45,26 @@ typedef NS_ENUM(NSUInteger, LWLayoutElementType) {
 
 @end
 
+/**
+ * 设置Element的样式，非线程安全
+ **/
 @interface LWLayoutStyle : NSObject
+
+@property (nonatomic, assign, readonly) CGSize preferredSize; //预设置的大小
+
+@property (nonatomic, assign) CGFloat width;
+
+@property (nonatomic, assign) CGFloat minWidth;
+
+@property (nonatomic, assign) CGFloat maxWidth;
+
+@property (nonatomic, assign) CGFloat height;
+
+@property (nonatomic, assign) CGFloat minHeight;
+
+@property (nonatomic, assign) CGFloat maxHeight;
+
+@property (nonatomic, strong, nullable) YogaStyle* yogaStyle;
 
 @end
 
