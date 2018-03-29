@@ -25,6 +25,8 @@
 		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */; };
 		3A985E75A7088472FC72F4215A32230E /* LWLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FF80CFFF94D6D131BCF04683CAA48ED5 /* LWLayout.m */; };
 		3C1C26EF3C557E5C1E40815031BE67A9 /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = B558C59925A48AE788F25DCF1074AAA0 /* YGStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FF39AA1206D28BA00C9DB37 /* LWYogaLayoutSepc.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FF39A9F206D28BA00C9DB37 /* LWYogaLayoutSepc.h */; };
+		3FF39AA2206D28BA00C9DB37 /* LWYogaLayoutSepc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF39AA0206D28BA00C9DB37 /* LWYogaLayoutSepc.m */; };
 		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4C553CC7AECF95385023141AAED6ED3D /* LWAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FFE677389578E42A9C3354E17FF32DC /* LWAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		501F192A57FB0DFA55B55A20232DAFF7 /* YGFloatOptional.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DFEE63359DA71F208E0B0386477AED /* YGFloatOptional.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -94,16 +96,16 @@
 /* Begin PBXFileReference section */
 		004C9725A493682B0E7CDB94A333EEC9 /* Pods-LWLayoutEngineer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LWLayoutEngineer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		00B390BD1BA5E1BE4DA97C3DF301BCDD /* LWInternalHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LWInternalHelper.h; path = LWLayoutEngineer/Classes/Base/LWInternalHelper.h; sourceTree = "<group>"; };
-		021161BBFCF1FC6E85EE533FEE8F1129 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		021161BBFCF1FC6E85EE533FEE8F1129 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0404E561CBE32969999516A6DF9864E8 /* YGNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGNode.h; sourceTree = "<group>"; };
 		052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		0DCB52C9C33ECD728C6838A885D0D1EF /* Utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = Utils.cpp; sourceTree = "<group>"; };
+		0DCB52C9C33ECD728C6838A885D0D1EF /* Utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
 		11D3C2C0987850D78095E8721FAB306A /* Pods-LWLayoutEngineer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LWLayoutEngineer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		13AB18E176B73E92C96A287B9ACE5ACB /* LWLayoutSepc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LWLayoutSepc.m; sourceTree = "<group>"; };
-		145CC5190FA7ABB2FD62AD31AABA8735 /* YGNode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGNode.cpp; sourceTree = "<group>"; };
-		24F9C9D01CA91710F08FED7133E98078 /* YGEnums.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGEnums.cpp; sourceTree = "<group>"; };
+		145CC5190FA7ABB2FD62AD31AABA8735 /* YGNode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = YGNode.cpp; sourceTree = "<group>"; };
+		24F9C9D01CA91710F08FED7133E98078 /* YGEnums.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = YGEnums.cpp; sourceTree = "<group>"; };
 		26B34F344992B1C5C00773742AC35962 /* Pods-LWLayoutEngineer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LWLayoutEngineer_Tests.modulemap"; sourceTree = "<group>"; };
 		2D3F4E8270DA7698D611AAC249D085EB /* LWYogaUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWYogaUtilities.h; sourceTree = "<group>"; };
 		2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
@@ -114,28 +116,30 @@
 		3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		3EF787AA44EEF8CDF753844C0FD3B987 /* LWLayoutStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWLayoutStyle.h; sourceTree = "<group>"; };
+		3FF39A9F206D28BA00C9DB37 /* LWYogaLayoutSepc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWYogaLayoutSepc.h; sourceTree = "<group>"; };
+		3FF39AA0206D28BA00C9DB37 /* LWYogaLayoutSepc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWYogaLayoutSepc.m; sourceTree = "<group>"; };
 		41BA63CD049DC171087937802CD072B0 /* LWLayoutEngineer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LWLayoutEngineer.xcconfig; sourceTree = "<group>"; };
 		426E79E7C72AE93B052BB1759DBD48FE /* LWLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWLayout.h; sourceTree = "<group>"; };
 		432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		4792533D7EE0F440EE722DA4999E845C /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		4D710D6DDFE6FB44D37BE032619305B5 /* Pods-LWLayoutEngineer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LWLayoutEngineer_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		5080F64E0CAC5931AE927B558614B812 /* Pods_LWLayoutEngineer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LWLayoutEngineer_Example.framework; path = "Pods-LWLayoutEngineer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		508F077475C52DA4A677DB70FDF745F4 /* LWLayoutEngineer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LWLayoutEngineer.framework; path = LWLayoutEngineer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5080F64E0CAC5931AE927B558614B812 /* Pods_LWLayoutEngineer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LWLayoutEngineer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		508F077475C52DA4A677DB70FDF745F4 /* LWLayoutEngineer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LWLayoutEngineer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53785D043DAE57E198710DF46CB932B1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		5A02084A7F3F2626FE39225A9113EC82 /* YogaStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YogaStyle.m; sourceTree = "<group>"; };
-		5CD1F3AE393D594EE955E521E668B8F6 /* YGStyle.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGStyle.cpp; sourceTree = "<group>"; };
+		5CD1F3AE393D594EE955E521E668B8F6 /* YGStyle.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = YGStyle.cpp; sourceTree = "<group>"; };
 		61A62F35766522AB78E6798F5517B11F /* LWYogaUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LWYogaUtilities.m; sourceTree = "<group>"; };
 		66414812932CF91591738D8354DD0AAE /* Pods-LWLayoutEngineer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LWLayoutEngineer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		67AEBE70B1E873C9F532E21A838001F3 /* Pods-LWLayoutEngineer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LWLayoutEngineer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		67E276593855381568F725E69496F29C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68ABD14E82903D65D36F4532AB71DE38 /* LWLayoutStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LWLayoutStyle.m; sourceTree = "<group>"; };
 		6A63498A0FF8658F0CC42085B3AFF912 /* Pods-LWLayoutEngineer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LWLayoutEngineer_Tests-dummy.m"; sourceTree = "<group>"; };
-		6B2194B1EF759C0995FC3BC9EF912740 /* YGLayout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGLayout.cpp; sourceTree = "<group>"; };
+		6B2194B1EF759C0995FC3BC9EF912740 /* YGLayout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = YGLayout.cpp; sourceTree = "<group>"; };
 		6D41CD39AD29614D422D9B28ADA30AE6 /* Pods-LWLayoutEngineer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LWLayoutEngineer_Example-umbrella.h"; sourceTree = "<group>"; };
 		743E1F439FBECC8F91ABE6D3112DAEEA /* Pods-LWLayoutEngineer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LWLayoutEngineer_Tests-umbrella.h"; sourceTree = "<group>"; };
 		7630D23ADA374AC4CE0329C15D8D227D /* Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
-		78800DCA31CBDE0AAEF40450276FCC00 /* YGFloatOptional.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGFloatOptional.cpp; sourceTree = "<group>"; };
+		78800DCA31CBDE0AAEF40450276FCC00 /* YGFloatOptional.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = YGFloatOptional.cpp; sourceTree = "<group>"; };
 		78DFEE63359DA71F208E0B0386477AED /* YGFloatOptional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGFloatOptional.h; sourceTree = "<group>"; };
 		7B37D7C695D5C6C47A7C093595CD4F06 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		7B493D2D543155FAF9EDE653D97BE44A /* Pods-LWLayoutEngineer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LWLayoutEngineer_Example-resources.sh"; sourceTree = "<group>"; };
@@ -145,9 +149,9 @@
 		81CF95D1F0638498EE0468D163514C74 /* YGMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
 		85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		89CACAF9EAA4BFC430E8C7A8EE96EFA6 /* Pods-LWLayoutEngineer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LWLayoutEngineer_Tests-resources.sh"; sourceTree = "<group>"; };
-		8FBE3079469A8A151A26BF77BA511687 /* Yoga.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = Yoga.cpp; sourceTree = "<group>"; };
+		8FBE3079469A8A151A26BF77BA511687 /* Yoga.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = Yoga.cpp; sourceTree = "<group>"; };
 		91DD0D594EEC6467028626DB490591F2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96F25E8671721067827250F8B1013AE3 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		975DF6876EC3E617A7DE7C6CE24DDDE5 /* LWInternalHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LWInternalHelper.m; path = LWLayoutEngineer/Classes/Base/LWInternalHelper.m; sourceTree = "<group>"; };
 		9A2EE559DAB32AA80E8C4BAF9DED9E0A /* LWLayoutSepc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWLayoutSepc.h; sourceTree = "<group>"; };
@@ -170,13 +174,13 @@
 		D48BC274C3B8C413A4BB093F1DE40113 /* LWLayoutEngineer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LWLayoutEngineer.modulemap; sourceTree = "<group>"; };
 		D5D2BB9F2A6C02A1F092FEDADF3A3DBA /* YGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
 		D75E4726D19AECBB6008B1C75F58C6BF /* Pods-LWLayoutEngineer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LWLayoutEngineer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D9605BF218F991772D5C5A4A81C842C4 /* YGNodePrint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGNodePrint.cpp; sourceTree = "<group>"; };
+		D9605BF218F991772D5C5A4A81C842C4 /* YGNodePrint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = YGNodePrint.cpp; sourceTree = "<group>"; };
 		D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		DCC28E9484D89B791A52E115E450789D /* Pods-LWLayoutEngineer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LWLayoutEngineer_Example-dummy.m"; sourceTree = "<group>"; };
 		E2320CA40BFF15FD51B8524BF0F52FA6 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
 		E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		E3A1AE5FF220CA8618E287A15A98C335 /* UIView+LWLayoutable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+LWLayoutable.m"; sourceTree = "<group>"; };
-		ED66F7752552991387A4E52FC69A1F6E /* Pods_LWLayoutEngineer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LWLayoutEngineer_Tests.framework; path = "Pods-LWLayoutEngineer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED66F7752552991387A4E52FC69A1F6E /* Pods_LWLayoutEngineer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LWLayoutEngineer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFB80A2C13774056103D49A511F432F /* LWLayoutEngineer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LWLayoutEngineer-prefix.pch"; sourceTree = "<group>"; };
 		EF519A026B10AC73ABBE6E658308B29D /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		F10CBDEE32E5F6BDECFB3D41F7DD0B03 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
@@ -247,7 +251,6 @@
 				3288FCB8E15F6401DE6220AE5CA1D27B /* Support Files */,
 				99E46DD4AB2256791F111C718CB0EEF8 /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -413,6 +416,8 @@
 				E3A1AE5FF220CA8618E287A15A98C335 /* UIView+LWLayoutable.m */,
 				BAF1207C4BE1C8C6BE0F330C175FC23B /* YogaStyle.h */,
 				5A02084A7F3F2626FE39225A9113EC82 /* YogaStyle.m */,
+				3FF39A9F206D28BA00C9DB37 /* LWYogaLayoutSepc.h */,
+				3FF39AA0206D28BA00C9DB37 /* LWYogaLayoutSepc.m */,
 			);
 			name = Layout;
 			path = LWLayoutEngineer/Classes/CoreSource/Layout;
@@ -521,6 +526,7 @@
 				70D44A2E79B0B4B6F54306F35A43B171 /* LWLayoutStyle.h in Headers */,
 				CB89C68727BCF73B4463B71FDA8A4411 /* LWYogaUtilities.h in Headers */,
 				FB4C7D847B0612A06F4FB5BA7E0887A9 /* UIView+LWLayoutable.h in Headers */,
+				3FF39AA1206D28BA00C9DB37 /* LWYogaLayoutSepc.h in Headers */,
 				70B34BA0A36BCAC2F87326841CF377C7 /* Utils.h in Headers */,
 				559D71F1B7FB4F6A230FDD0D2D80A798 /* YGEnums.h in Headers */,
 				501F192A57FB0DFA55B55A20232DAFF7 /* YGFloatOptional.h in Headers */,
@@ -643,6 +649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD8F6472BC8DE15D1992C8EB683AB3CB /* LWInternalHelper.m in Sources */,
+				3FF39AA2206D28BA00C9DB37 /* LWYogaLayoutSepc.m in Sources */,
 				3A985E75A7088472FC72F4215A32230E /* LWLayout.m in Sources */,
 				87B4518628EC5E18253AA3677FC02505 /* LWLayoutEngineer-dummy.m in Sources */,
 				FAD0ED570823C07A40BDAD1A08395834 /* LWLayoutSepc.m in Sources */,

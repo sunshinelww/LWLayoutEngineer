@@ -6,6 +6,7 @@
 //
 
 #import "LWLayoutStyle.h"
+#import "YogaStyle.h"
 
 @implementation LWLayoutStyle{
     CGSize _size;
@@ -49,6 +50,13 @@
     CGSize newSize = _size;
     newSize.width = preferredSize.width;
     newSize.height = preferredSize.height;
+}
+
+- (YogaStyle *)yogaStyle{
+    if (!_yogaStyle) { //设置默认的yoGaStyle
+        _yogaStyle = [[YogaStyle alloc] init];
+    }
+    return _yogaStyle;
 }
 
 @end
