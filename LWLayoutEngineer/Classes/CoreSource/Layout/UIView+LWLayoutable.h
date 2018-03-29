@@ -7,11 +7,14 @@
 
 #import <UIKit/UIKit.h>
 #import "LWLayoutStyle.h"
+#import "LWLayoutSepc.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (LWLayoutable) <LWLayoutable>
 
+- (LWLayoutSepc *)layoutSpecThatFits:(CGSize)constrainedSize;
 
 - (LWLayout *)layoutThatFits:(CGSize)constrainedSize;
 

@@ -40,7 +40,7 @@ FOUNDATION_EXTERN BOOL LWPointIsNull(CGPoint point);
 /**
  *  Position in parent. Default to LWPointNull
  **/
-@property (nonatomic, assign, readonly) CGPoint position;
+@property (nonatomic, assign, readwrite) CGPoint position;
 
 @property (nonatomic, copy, readonly) NSArray<LWLayout *> *subLayouts;
 

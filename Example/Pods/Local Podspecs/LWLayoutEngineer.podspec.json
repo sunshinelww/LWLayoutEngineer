@@ -9,7 +9,7 @@
     "file": "LICENSE"
   },
   "authors": {
-    "13517248639@163.com": "liweiweisunshinelww@didichuxing.com"
+    "13517248639@163.com": "13517248639@163.com"
   },
   "source": {
     "git": "https://github.com/13517248639@163.com/LWLayoutEngineer.git",
@@ -23,14 +23,15 @@
       "name": "Core",
       "public_header_files": [
         "LWLayoutEngineer/Classes/CoreSource/YogaCore/*.h",
-        "LWLayoutEngineer/Classes/CoreSource/YogaKit/*.h"
+        "LWLayoutEngineer/Classes/CoreSource/YogaKit/*.h",
+        "LWLayoutEngineer/Classes/CoreSource/Layout/*.h"
       ],
-      "source_files": "LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,m}"
+      "source_files": "LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,cpp,m}"
     },
     {
       "name": "Base",
       "public_header_files": "LWLayoutEngineer/Classes/Base/*.h",
-      "source_files": "LWLayoutEngineer/Classes/Base/*.{h,c,m}"
+      "source_files": "LWLayoutEngineer/Classes/Base/*.{h,c,cpp,m}"
     }
   ]
 }

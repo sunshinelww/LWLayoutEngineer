@@ -43,7 +43,6 @@
     return [LWLayout layoutWithLayoutElement:self size:CGSizeZero];
 }
 
-
 - (void)setChild:(id<LWLayoutable>)child{
     if (child) {
         _childrenArray[0] = child;

@@ -7,61 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001AC07404E1355CDA631FD60C463632 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A19D50CD49BF3BAA7C274320300E4C69 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		06E37CA5EA1E19615C13025702901DF2 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24F9C9D01CA91710F08FED7133E98078 /* YGEnums.cpp */; };
+		070BC33EE7C09C67517C935CB969402C /* LWLayoutSepc.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A2EE559DAB32AA80E8C4BAF9DED9E0A /* LWLayoutSepc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */; };
-		1175B3CF4903837BC8F45603FA99D990 /* YogaStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B112266A23312E56A439675E7A80E46 /* YogaStyle.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1505D37C38031D3972FEAC5EB24A8575 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
+		0A87BC0D458620A77EFAD2BD3496A9AD /* YogaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A02084A7F3F2626FE39225A9113EC82 /* YogaStyle.m */; };
+		0C6BA7A705D81221B109B7ADD56E474C /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B2194B1EF759C0995FC3BC9EF912740 /* YGLayout.cpp */; };
+		13DA899ECA25A2CE8A4188C6CF8D77B8 /* LWLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 426E79E7C72AE93B052BB1759DBD48FE /* LWLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1961A08FC034CAF0BB593F485CF4823C /* LWDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = AC12B7C7BD93E581A2113651C1DCA42F /* LWDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */; };
-		1B12C1237AF8DBA02C7A541E8F609896 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = AD1C42EEE636C19B5D0744BBECF58736 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1BD6D584729A2F5925C7416E85E0BDE7 /* LWLayoutSepc.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C2DE3AFE8E3A7182A172CD3F1820AC /* LWLayoutSepc.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		25A35C08720E15B26ED14DA635AEB96C /* LWInternalHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 00B390BD1BA5E1BE4DA97C3DF301BCDD /* LWInternalHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20C246886D4EFF79A7EF207B5D85CA9B /* YGNodePrint.h in Headers */ = {isa = PBXBuildFile; fileRef = B2780C357A046B04B2E3AEFCE15F1B8B /* YGNodePrint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26CF5F0A7C7F412D6DCF30DDCC10F5FA /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 81CF95D1F0638498EE0468D163514C74 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		280CA51623181DDE1C4138E696CF8758 /* LWLayoutStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ABD14E82903D65D36F4532AB71DE38 /* LWLayoutStyle.m */; };
 		29971D20693DA178A7ACA5123D8A7D98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
 		2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30D6B3357D33E90293231E85F83A22B2 /* Pods-LWLayoutEngineer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC28E9484D89B791A52E115E450789D /* Pods-LWLayoutEngineer_Example-dummy.m */; };
-		30FB5C1B5D6467C33BF8953B28C8B89D /* LWLayoutEngineer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE0A24E533A1FAE8B9D340C7CDF4E25 /* LWLayoutEngineer-dummy.m */; };
 		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */; };
-		3FA9D96F4198BC61DCCC4289CAD0BB89 /* LWAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FFE677389578E42A9C3354E17FF32DC /* LWAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A985E75A7088472FC72F4215A32230E /* LWLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FF80CFFF94D6D131BCF04683CAA48ED5 /* LWLayout.m */; };
+		3C1C26EF3C557E5C1E40815031BE67A9 /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = B558C59925A48AE788F25DCF1074AAA0 /* YGStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		45CAB990DF1C3C3E58D21C3D89C98350 /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9F23FF86762D3A0E6B2FF9EBCD472C /* YGNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47D22991C6FFEEE7B132B894BE0CE8DE /* LWLayoutEngineer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A9948BA6A66C5607A587BFE316284B /* LWLayoutEngineer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C553CC7AECF95385023141AAED6ED3D /* LWAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FFE677389578E42A9C3354E17FF32DC /* LWAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		501F192A57FB0DFA55B55A20232DAFF7 /* YGFloatOptional.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DFEE63359DA71F208E0B0386477AED /* YGFloatOptional.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4792533D7EE0F440EE722DA4999E845C /* FBSnapshotTestCase-dummy.m */; };
 		5425B4028E6801BFF9FEAE6AA42BF228 /* Pods-LWLayoutEngineer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 743E1F439FBECC8F91ABE6D3112DAEEA /* Pods-LWLayoutEngineer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69AF787890E4D0B076E6627FC5B24E39 /* LWLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F2B4E70DB9E3C42E78364DE1ADEEB15 /* LWLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		559D71F1B7FB4F6A230FDD0D2D80A798 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D2BB9F2A6C02A1F092FEDADF3A3DBA /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67BB864B2D8E6E2E7B117F11D2014665 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 145CC5190FA7ABB2FD62AD31AABA8735 /* YGNode.cpp */; };
+		68EEBB9824A36D874549BC2F3BB030BF /* LWLayoutEngineer.h in Headers */ = {isa = PBXBuildFile; fileRef = F29D62125CD71EFACED58880069DC503 /* LWLayoutEngineer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */; };
-		70190D2B8052AB26C6246C9B70188094 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = BB28C1136946FE5C4958D418C2A2FE21 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70B34BA0A36BCAC2F87326841CF377C7 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 96F25E8671721067827250F8B1013AE3 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70D44A2E79B0B4B6F54306F35A43B171 /* LWLayoutStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EF787AA44EEF8CDF753844C0FD3B987 /* LWLayoutStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */; };
-		7855A10C87EF4894A46E723862D92233 /* LWLayoutEngineer.h in Headers */ = {isa = PBXBuildFile; fileRef = E2B0EBDF06277069295D4BF26D05F726 /* LWLayoutEngineer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7680CC7C79AAEFC392588747FA351AE1 /* LWYogaUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A62F35766522AB78E6798F5517B11F /* LWYogaUtilities.m */; };
+		77085572B023A23FB52338D26680D819 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB52C9C33ECD728C6838A885D0D1EF /* Utils.cpp */; };
 		7DB56B1B7696823501CC53DBEA1AD8F1 /* Pods-LWLayoutEngineer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A63498A0FF8658F0CC42085B3AFF912 /* Pods-LWLayoutEngineer_Tests-dummy.m */; };
 		7E9B14D5F8842A86CA86F2AF45230725 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */; };
 		841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */; };
-		89FADD2AFFC4A2199A13C2AEB3E36213 /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A5AE2416B8C748AED76081AEC697E7 /* Yoga-internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8425CBD38946C261CB5D95E124252A22 /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C604EBEA13546B9516144273A9067C71 /* Yoga-internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87B4518628EC5E18253AA3677FC02505 /* LWLayoutEngineer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE0A24E533A1FAE8B9D340C7CDF4E25 /* LWLayoutEngineer-dummy.m */; };
+		8E5E5C9801E06B0868DF108351470000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
 		91D0138ACFAD733E4061F12E450C336C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
-		9246F6FE831ECA333E5CC501ABA9363D /* YGFloatOptional.h in Headers */ = {isa = PBXBuildFile; fileRef = F4CEE7E49A85C6C135B39FC329AB9776 /* YGFloatOptional.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93A241FB36485B5B297843B10EC275BF /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 7630D23ADA374AC4CE0329C15D8D227D /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4D7F19246AF8EBA8109A5AE863F2BC9 /* UIView+LWLayoutable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B597F245AA27BEC27D26DBFF50B4301 /* UIView+LWLayoutable.m */; };
+		9F89E3C6A1EB0D28F164666D8BC0B3B5 /* YogaStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = BAF1207C4BE1C8C6BE0F330C175FC23B /* YogaStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A08AD1DEF6E05DB66437BF989FC54F21 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE3079469A8A151A26BF77BA511687 /* Yoga.cpp */; };
 		A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */; };
 		ACB9C7B1F23902F544799B337034374D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
-		ADC7C7D208C884027DCC6622E118F126 /* LWDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = AC12B7C7BD93E581A2113651C1DCA42F /* LWDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADF7CA3E020677450555EB525711B13B /* YGNodePrint.h in Headers */ = {isa = PBXBuildFile; fileRef = C15E38C711BEB6A310516F9CDFC3BEFA /* YGNodePrint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27810809BAD71E4022600B21251449F /* QuartzCore.framework */; };
-		B6FCC821AE8844CB3663B1A16B1D4BB2 /* LWLayoutSepc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A89DDA0C4F4BC8516333A4AE18E4804 /* LWLayoutSepc.m */; };
+		B4B35C8915D2B0109D4F7565934BBB45 /* UIView+LWLayoutable.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A1AE5FF220CA8618E287A15A98C335 /* UIView+LWLayoutable.m */; };
 		B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A11D5B54955E3381F067364E427B571A /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */; };
 		BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C77997AC7E25A3D7152F5C3444664E2B /* LWLayoutStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 480D3A9FD2E13CA2AF3E7C7A5086369B /* LWLayoutStyle.m */; };
-		C8B0173A8E4199B9788543EE0AE1D166 /* LWInternalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 975DF6876EC3E617A7DE7C6CE24DDDE5 /* LWInternalHelper.m */; };
-		C97DBAE49565DCB049C7C759141F66CF /* UIView+LWLayoutable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FEDA1A497C3F18AF70FFF5389A81FE8 /* UIView+LWLayoutable.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C6FDD11BE2FEC4AF0E4D279CB253CB37 /* YGFloatOptional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78800DCA31CBDE0AAEF40450276FCC00 /* YGFloatOptional.cpp */; };
 		CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CC933A1F377B504D09EB7B1FFE8EF277 /* LWLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 28670A73E139820486DFAB6AEF06010E /* LWLayout.m */; };
+		CB89C68727BCF73B4463B71FDA8A4411 /* LWYogaUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3F4E8270DA7698D611AAC249D085EB /* LWYogaUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEF3F5186176BA31B5B45219746980B9 /* Pods-LWLayoutEngineer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D41CD39AD29614D422D9B28ADA30AE6 /* Pods-LWLayoutEngineer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2E84DAFE947BBF61492DF31853C6755 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B4A8C885C64BFE7C5A0CC600527E80 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5521356752C63661F542D0C6D25BA49 /* LWLayoutStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EE3E5832DE393AC05E8954CF2BB9A1C /* LWLayoutStyle.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D6FC51B1EB57A1323579FD70C3E51026 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B26692725E8DFC2C4012CB976C0369 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D32F978FD91918DE89B1CA9C1A5BF21A /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CD1F3AE393D594EE955E521E668B8F6 /* YGStyle.cpp */; };
+		D81F5504F1A4415380A1C765F3166B00 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9605BF218F991772D5C5A4A81C842C4 /* YGNodePrint.cpp */; };
 		DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
-		EC5A871776F9747BE9105BE751AFE2B1 /* YogaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77B21B0EEEC0A46BF655483DB38525 /* YogaStyle.m */; };
-		FE3E33CE07E82A17B5568801131AA17F /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = FF30288E5AD7C1220700A34B584ED8A5 /* YGStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE4D5B964C2190D373FAA348313440F3 /* LWInternalHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 00B390BD1BA5E1BE4DA97C3DF301BCDD /* LWInternalHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E65207B651F61E7B8A6DE5058B9C46D3 /* LWLayoutEngineer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A9948BA6A66C5607A587BFE316284B /* LWLayoutEngineer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7C94BB0773F79E5354A22AA8CD0748C /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E2320CA40BFF15FD51B8524BF0F52FA6 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E95AD37FD3565ACEE24B471FBE8749CC /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0404E561CBE32969999516A6DF9864E8 /* YGNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAD0ED570823C07A40BDAD1A08395834 /* LWLayoutSepc.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AB18E176B73E92C96A287B9ACE5ACB /* LWLayoutSepc.m */; };
+		FB4C7D847B0612A06F4FB5BA7E0887A9 /* UIView+LWLayoutable.h in Headers */ = {isa = PBXBuildFile; fileRef = B139C40824D53BA4D15FAE7E02F82FA1 /* UIView+LWLayoutable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD8F6472BC8DE15D1992C8EB683AB3CB /* LWInternalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 975DF6876EC3E617A7DE7C6CE24DDDE5 /* LWInternalHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +79,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0BF7A37C90F76654311460576B985206;
+			remoteGlobalIDString = 06FB94F0FE20DBEB2B2AA66D1BF577EF;
 			remoteInfo = LWLayoutEngineer;
 		};
 		71148C3038AC92BAB8986F2C1A6DE28F /* PBXContainerItemProxy */ = {
@@ -85,87 +95,105 @@
 		004C9725A493682B0E7CDB94A333EEC9 /* Pods-LWLayoutEngineer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LWLayoutEngineer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		00B390BD1BA5E1BE4DA97C3DF301BCDD /* LWInternalHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LWInternalHelper.h; path = LWLayoutEngineer/Classes/Base/LWInternalHelper.h; sourceTree = "<group>"; };
 		021161BBFCF1FC6E85EE533FEE8F1129 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0404E561CBE32969999516A6DF9864E8 /* YGNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGNode.h; sourceTree = "<group>"; };
 		052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
-		05B26692725E8DFC2C4012CB976C0369 /* YGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
 		0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		0DCB52C9C33ECD728C6838A885D0D1EF /* Utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = Utils.cpp; sourceTree = "<group>"; };
 		11D3C2C0987850D78095E8721FAB306A /* Pods-LWLayoutEngineer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LWLayoutEngineer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		1E77B21B0EEEC0A46BF655483DB38525 /* YogaStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YogaStyle.m; sourceTree = "<group>"; };
-		1EE3E5832DE393AC05E8954CF2BB9A1C /* LWLayoutStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWLayoutStyle.h; sourceTree = "<group>"; };
-		1FEDA1A497C3F18AF70FFF5389A81FE8 /* UIView+LWLayoutable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+LWLayoutable.h"; sourceTree = "<group>"; };
+		13AB18E176B73E92C96A287B9ACE5ACB /* LWLayoutSepc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LWLayoutSepc.m; sourceTree = "<group>"; };
+		145CC5190FA7ABB2FD62AD31AABA8735 /* YGNode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGNode.cpp; sourceTree = "<group>"; };
+		24F9C9D01CA91710F08FED7133E98078 /* YGEnums.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGEnums.cpp; sourceTree = "<group>"; };
 		26B34F344992B1C5C00773742AC35962 /* Pods-LWLayoutEngineer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LWLayoutEngineer_Tests.modulemap"; sourceTree = "<group>"; };
-		28670A73E139820486DFAB6AEF06010E /* LWLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LWLayout.m; sourceTree = "<group>"; };
+		2D3F4E8270DA7698D611AAC249D085EB /* LWYogaUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWYogaUtilities.h; sourceTree = "<group>"; };
 		2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
-		34A5AE2416B8C748AED76081AEC697E7 /* Yoga-internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Yoga-internal.h"; sourceTree = "<group>"; };
 		36BECDD2E678586563B55EFEB7C22B51 /* Pods-LWLayoutEngineer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LWLayoutEngineer_Example.modulemap"; sourceTree = "<group>"; };
 		37A9948BA6A66C5607A587BFE316284B /* LWLayoutEngineer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LWLayoutEngineer-umbrella.h"; sourceTree = "<group>"; };
 		39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
+		3EF787AA44EEF8CDF753844C0FD3B987 /* LWLayoutStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWLayoutStyle.h; sourceTree = "<group>"; };
 		41BA63CD049DC171087937802CD072B0 /* LWLayoutEngineer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LWLayoutEngineer.xcconfig; sourceTree = "<group>"; };
+		426E79E7C72AE93B052BB1759DBD48FE /* LWLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWLayout.h; sourceTree = "<group>"; };
 		432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		4792533D7EE0F440EE722DA4999E845C /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		480D3A9FD2E13CA2AF3E7C7A5086369B /* LWLayoutStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LWLayoutStyle.m; sourceTree = "<group>"; };
 		4D710D6DDFE6FB44D37BE032619305B5 /* Pods-LWLayoutEngineer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LWLayoutEngineer_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		5080F64E0CAC5931AE927B558614B812 /* Pods_LWLayoutEngineer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LWLayoutEngineer_Example.framework; path = "Pods-LWLayoutEngineer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		508F077475C52DA4A677DB70FDF745F4 /* LWLayoutEngineer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LWLayoutEngineer.framework; path = LWLayoutEngineer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53785D043DAE57E198710DF46CB932B1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		65B4A8C885C64BFE7C5A0CC600527E80 /* YGMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
-		65C2DE3AFE8E3A7182A172CD3F1820AC /* LWLayoutSepc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWLayoutSepc.h; sourceTree = "<group>"; };
+		5A02084A7F3F2626FE39225A9113EC82 /* YogaStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YogaStyle.m; sourceTree = "<group>"; };
+		5CD1F3AE393D594EE955E521E668B8F6 /* YGStyle.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGStyle.cpp; sourceTree = "<group>"; };
+		61A62F35766522AB78E6798F5517B11F /* LWYogaUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LWYogaUtilities.m; sourceTree = "<group>"; };
 		66414812932CF91591738D8354DD0AAE /* Pods-LWLayoutEngineer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LWLayoutEngineer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		67AEBE70B1E873C9F532E21A838001F3 /* Pods-LWLayoutEngineer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LWLayoutEngineer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		67E276593855381568F725E69496F29C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68ABD14E82903D65D36F4532AB71DE38 /* LWLayoutStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LWLayoutStyle.m; sourceTree = "<group>"; };
 		6A63498A0FF8658F0CC42085B3AFF912 /* Pods-LWLayoutEngineer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LWLayoutEngineer_Tests-dummy.m"; sourceTree = "<group>"; };
-		6A89DDA0C4F4BC8516333A4AE18E4804 /* LWLayoutSepc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LWLayoutSepc.m; sourceTree = "<group>"; };
-		6B112266A23312E56A439675E7A80E46 /* YogaStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YogaStyle.h; sourceTree = "<group>"; };
+		6B2194B1EF759C0995FC3BC9EF912740 /* YGLayout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGLayout.cpp; sourceTree = "<group>"; };
 		6D41CD39AD29614D422D9B28ADA30AE6 /* Pods-LWLayoutEngineer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LWLayoutEngineer_Example-umbrella.h"; sourceTree = "<group>"; };
 		743E1F439FBECC8F91ABE6D3112DAEEA /* Pods-LWLayoutEngineer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LWLayoutEngineer_Tests-umbrella.h"; sourceTree = "<group>"; };
+		7630D23ADA374AC4CE0329C15D8D227D /* Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
+		78800DCA31CBDE0AAEF40450276FCC00 /* YGFloatOptional.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGFloatOptional.cpp; sourceTree = "<group>"; };
+		78DFEE63359DA71F208E0B0386477AED /* YGFloatOptional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGFloatOptional.h; sourceTree = "<group>"; };
 		7B37D7C695D5C6C47A7C093595CD4F06 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		7B493D2D543155FAF9EDE653D97BE44A /* Pods-LWLayoutEngineer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LWLayoutEngineer_Example-resources.sh"; sourceTree = "<group>"; };
-		7B597F245AA27BEC27D26DBFF50B4301 /* UIView+LWLayoutable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+LWLayoutable.m"; sourceTree = "<group>"; };
 		7D2DE5A8E8148F31A3885B44D1CEA297 /* Pods-LWLayoutEngineer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LWLayoutEngineer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		7FFE677389578E42A9C3354E17FF32DC /* LWAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LWAssert.h; path = LWLayoutEngineer/Classes/Base/LWAssert.h; sourceTree = "<group>"; };
+		81CF95D1F0638498EE0468D163514C74 /* YGMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
 		85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		89CACAF9EAA4BFC430E8C7A8EE96EFA6 /* Pods-LWLayoutEngineer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LWLayoutEngineer_Tests-resources.sh"; sourceTree = "<group>"; };
+		8FBE3079469A8A151A26BF77BA511687 /* Yoga.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = Yoga.cpp; sourceTree = "<group>"; };
 		91DD0D594EEC6467028626DB490591F2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96F25E8671721067827250F8B1013AE3 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		975DF6876EC3E617A7DE7C6CE24DDDE5 /* LWInternalHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LWInternalHelper.m; path = LWLayoutEngineer/Classes/Base/LWInternalHelper.m; sourceTree = "<group>"; };
+		9A2EE559DAB32AA80E8C4BAF9DED9E0A /* LWLayoutSepc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWLayoutSepc.h; sourceTree = "<group>"; };
 		9A64DE4BACF7F33561DC866CE8D50C34 /* Pods-LWLayoutEngineer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LWLayoutEngineer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9F2B4E70DB9E3C42E78364DE1ADEEB15 /* LWLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LWLayout.h; sourceTree = "<group>"; };
 		A11D5B54955E3381F067364E427B571A /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
-		A19D50CD49BF3BAA7C274320300E4C69 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
 		A27810809BAD71E4022600B21251449F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		A59E25BF7B46D5C2B489705D1122D4DE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A79CBE4FC533F43D0B564DEB410592BB /* Pods-LWLayoutEngineer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LWLayoutEngineer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		AC12B7C7BD93E581A2113651C1DCA42F /* LWDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LWDefines.h; path = LWLayoutEngineer/Classes/Base/LWDefines.h; sourceTree = "<group>"; };
-		AD1C42EEE636C19B5D0744BBECF58736 /* Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
+		B139C40824D53BA4D15FAE7E02F82FA1 /* UIView+LWLayoutable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+LWLayoutable.h"; sourceTree = "<group>"; };
+		B2780C357A046B04B2E3AEFCE15F1B8B /* YGNodePrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGNodePrint.h; sourceTree = "<group>"; };
+		B558C59925A48AE788F25DCF1074AAA0 /* YGStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGStyle.h; sourceTree = "<group>"; };
 		B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		BB28C1136946FE5C4958D418C2A2FE21 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		C15E38C711BEB6A310516F9CDFC3BEFA /* YGNodePrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGNodePrint.h; sourceTree = "<group>"; };
+		BAF1207C4BE1C8C6BE0F330C175FC23B /* YogaStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YogaStyle.h; sourceTree = "<group>"; };
+		C604EBEA13546B9516144273A9067C71 /* Yoga-internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Yoga-internal.h"; sourceTree = "<group>"; };
 		C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CC36122C56B6F8ED2D02463DFB9F8C92 /* Pods-LWLayoutEngineer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LWLayoutEngineer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D48BC274C3B8C413A4BB093F1DE40113 /* LWLayoutEngineer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LWLayoutEngineer.modulemap; sourceTree = "<group>"; };
+		D5D2BB9F2A6C02A1F092FEDADF3A3DBA /* YGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
 		D75E4726D19AECBB6008B1C75F58C6BF /* Pods-LWLayoutEngineer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LWLayoutEngineer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D9605BF218F991772D5C5A4A81C842C4 /* YGNodePrint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = YGNodePrint.cpp; sourceTree = "<group>"; };
 		D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		DCC28E9484D89B791A52E115E450789D /* Pods-LWLayoutEngineer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LWLayoutEngineer_Example-dummy.m"; sourceTree = "<group>"; };
-		E2B0EBDF06277069295D4BF26D05F726 /* LWLayoutEngineer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LWLayoutEngineer.h; path = LWLayoutEngineer/Classes/CoreSource/LWLayoutEngineer.h; sourceTree = "<group>"; };
+		E2320CA40BFF15FD51B8524BF0F52FA6 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
 		E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
+		E3A1AE5FF220CA8618E287A15A98C335 /* UIView+LWLayoutable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+LWLayoutable.m"; sourceTree = "<group>"; };
 		ED66F7752552991387A4E52FC69A1F6E /* Pods_LWLayoutEngineer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LWLayoutEngineer_Tests.framework; path = "Pods-LWLayoutEngineer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFB80A2C13774056103D49A511F432F /* LWLayoutEngineer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LWLayoutEngineer-prefix.pch"; sourceTree = "<group>"; };
 		EF519A026B10AC73ABBE6E658308B29D /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		F10CBDEE32E5F6BDECFB3D41F7DD0B03 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		F4CEE7E49A85C6C135B39FC329AB9776 /* YGFloatOptional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGFloatOptional.h; sourceTree = "<group>"; };
-		FB9F23FF86762D3A0E6B2FF9EBCD472C /* YGNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGNode.h; sourceTree = "<group>"; };
+		F29D62125CD71EFACED58880069DC503 /* LWLayoutEngineer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LWLayoutEngineer.h; path = LWLayoutEngineer/Classes/CoreSource/LWLayoutEngineer.h; sourceTree = "<group>"; };
 		FCE0A24E533A1FAE8B9D340C7CDF4E25 /* LWLayoutEngineer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LWLayoutEngineer-dummy.m"; sourceTree = "<group>"; };
-		FF30288E5AD7C1220700A34B584ED8A5 /* YGStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGStyle.h; sourceTree = "<group>"; };
+		FF80CFFF94D6D131BCF04683CAA48ED5 /* LWLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LWLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		03B7786553967ECABB8477A4F7B97E5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E5E5C9801E06B0868DF108351470000 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D421A30A1BDB7E1C4216F64D0C939B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,14 +202,6 @@
 				B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */,
 				841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */,
 				7E9B14D5F8842A86CA86F2AF45230725 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BC522A10BC0143D748DD75475CC233C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1505D37C38031D3972FEAC5EB24A8575 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,24 +238,6 @@
 				5A05D2EBC9E28DBB1D054224E65E2319 /* LWLayoutEngineer */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		217CB9E3E2AC7F1527AA0EE4CD9FADD5 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				9F2B4E70DB9E3C42E78364DE1ADEEB15 /* LWLayout.h */,
-				28670A73E139820486DFAB6AEF06010E /* LWLayout.m */,
-				65C2DE3AFE8E3A7182A172CD3F1820AC /* LWLayoutSepc.h */,
-				6A89DDA0C4F4BC8516333A4AE18E4804 /* LWLayoutSepc.m */,
-				1EE3E5832DE393AC05E8954CF2BB9A1C /* LWLayoutStyle.h */,
-				480D3A9FD2E13CA2AF3E7C7A5086369B /* LWLayoutStyle.m */,
-				1FEDA1A497C3F18AF70FFF5389A81FE8 /* UIView+LWLayoutable.h */,
-				7B597F245AA27BEC27D26DBFF50B4301 /* UIView+LWLayoutable.m */,
-				6B112266A23312E56A439675E7A80E46 /* YogaStyle.h */,
-				1E77B21B0EEEC0A46BF655483DB38525 /* YogaStyle.m */,
-			);
-			name = Layout;
-			path = LWLayoutEngineer/Classes/CoreSource/Layout;
 			sourceTree = "<group>";
 		};
 		2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */ = {
@@ -278,7 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				A82EC2413A913EC6245ACEBF96FC609A /* Base */,
-				C37F1551C29E89EF9BA42F2E1EC64FF4 /* Core */,
+				952FD42C07E06F2A52EF6DBEC7158FC8 /* Core */,
 				650DF4413361FF100DE1C31AC23141CB /* Support Files */,
 			);
 			name = LWLayoutEngineer;
@@ -310,24 +312,6 @@
 				5A3B11EEB24F42C6C1817AC2DC7B6273 /* Pods-LWLayoutEngineer_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		5DE50BCBAAD175847CF83058E0E76A30 /* YogaCore */ = {
-			isa = PBXGroup;
-			children = (
-				BB28C1136946FE5C4958D418C2A2FE21 /* Utils.h */,
-				05B26692725E8DFC2C4012CB976C0369 /* YGEnums.h */,
-				F4CEE7E49A85C6C135B39FC329AB9776 /* YGFloatOptional.h */,
-				A19D50CD49BF3BAA7C274320300E4C69 /* YGLayout.h */,
-				65B4A8C885C64BFE7C5A0CC600527E80 /* YGMacros.h */,
-				FB9F23FF86762D3A0E6B2FF9EBCD472C /* YGNode.h */,
-				C15E38C711BEB6A310516F9CDFC3BEFA /* YGNodePrint.h */,
-				FF30288E5AD7C1220700A34B584ED8A5 /* YGStyle.h */,
-				AD1C42EEE636C19B5D0744BBECF58736 /* Yoga.h */,
-				34A5AE2416B8C748AED76081AEC697E7 /* Yoga-internal.h */,
-			);
-			name = YogaCore;
-			path = LWLayoutEngineer/Classes/CoreSource/YogaCore;
 			sourceTree = "<group>";
 		};
 		650DF4413361FF100DE1C31AC23141CB /* Support Files */ = {
@@ -367,6 +351,16 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		952FD42C07E06F2A52EF6DBEC7158FC8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F29D62125CD71EFACED58880069DC503 /* LWLayoutEngineer.h */,
+				BD2F9DAD74BC448379A72E8A9BC48729 /* Layout */,
+				EE5507E2DF57DAFD5FDEFD465D5C9C29 /* YogaCore */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		99E46DD4AB2256791F111C718CB0EEF8 /* SwiftSupport */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,14 +398,50 @@
 			path = "Target Support Files/Pods-LWLayoutEngineer_Example";
 			sourceTree = "<group>";
 		};
-		C37F1551C29E89EF9BA42F2E1EC64FF4 /* Core */ = {
+		BD2F9DAD74BC448379A72E8A9BC48729 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				E2B0EBDF06277069295D4BF26D05F726 /* LWLayoutEngineer.h */,
-				217CB9E3E2AC7F1527AA0EE4CD9FADD5 /* Layout */,
-				5DE50BCBAAD175847CF83058E0E76A30 /* YogaCore */,
+				426E79E7C72AE93B052BB1759DBD48FE /* LWLayout.h */,
+				FF80CFFF94D6D131BCF04683CAA48ED5 /* LWLayout.m */,
+				9A2EE559DAB32AA80E8C4BAF9DED9E0A /* LWLayoutSepc.h */,
+				13AB18E176B73E92C96A287B9ACE5ACB /* LWLayoutSepc.m */,
+				3EF787AA44EEF8CDF753844C0FD3B987 /* LWLayoutStyle.h */,
+				68ABD14E82903D65D36F4532AB71DE38 /* LWLayoutStyle.m */,
+				2D3F4E8270DA7698D611AAC249D085EB /* LWYogaUtilities.h */,
+				61A62F35766522AB78E6798F5517B11F /* LWYogaUtilities.m */,
+				B139C40824D53BA4D15FAE7E02F82FA1 /* UIView+LWLayoutable.h */,
+				E3A1AE5FF220CA8618E287A15A98C335 /* UIView+LWLayoutable.m */,
+				BAF1207C4BE1C8C6BE0F330C175FC23B /* YogaStyle.h */,
+				5A02084A7F3F2626FE39225A9113EC82 /* YogaStyle.m */,
 			);
-			name = Core;
+			name = Layout;
+			path = LWLayoutEngineer/Classes/CoreSource/Layout;
+			sourceTree = "<group>";
+		};
+		EE5507E2DF57DAFD5FDEFD465D5C9C29 /* YogaCore */ = {
+			isa = PBXGroup;
+			children = (
+				0DCB52C9C33ECD728C6838A885D0D1EF /* Utils.cpp */,
+				96F25E8671721067827250F8B1013AE3 /* Utils.h */,
+				24F9C9D01CA91710F08FED7133E98078 /* YGEnums.cpp */,
+				D5D2BB9F2A6C02A1F092FEDADF3A3DBA /* YGEnums.h */,
+				78800DCA31CBDE0AAEF40450276FCC00 /* YGFloatOptional.cpp */,
+				78DFEE63359DA71F208E0B0386477AED /* YGFloatOptional.h */,
+				6B2194B1EF759C0995FC3BC9EF912740 /* YGLayout.cpp */,
+				E2320CA40BFF15FD51B8524BF0F52FA6 /* YGLayout.h */,
+				81CF95D1F0638498EE0468D163514C74 /* YGMacros.h */,
+				145CC5190FA7ABB2FD62AD31AABA8735 /* YGNode.cpp */,
+				0404E561CBE32969999516A6DF9864E8 /* YGNode.h */,
+				D9605BF218F991772D5C5A4A81C842C4 /* YGNodePrint.cpp */,
+				B2780C357A046B04B2E3AEFCE15F1B8B /* YGNodePrint.h */,
+				5CD1F3AE393D594EE955E521E668B8F6 /* YGStyle.cpp */,
+				B558C59925A48AE788F25DCF1074AAA0 /* YGStyle.h */,
+				8FBE3079469A8A151A26BF77BA511687 /* Yoga.cpp */,
+				7630D23ADA374AC4CE0329C15D8D227D /* Yoga.h */,
+				C604EBEA13546B9516144273A9067C71 /* Yoga-internal.h */,
+			);
+			name = YogaCore;
+			path = LWLayoutEngineer/Classes/CoreSource/YogaCore;
 			sourceTree = "<group>";
 		};
 		F35791481CAFDD8E7715AE1B44687328 /* Core */ = {
@@ -454,33 +484,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6AB9E053FD2B92C19D42ED2FDF9C2B55 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3FA9D96F4198BC61DCCC4289CAD0BB89 /* LWAssert.h in Headers */,
-				ADC7C7D208C884027DCC6622E118F126 /* LWDefines.h in Headers */,
-				25A35C08720E15B26ED14DA635AEB96C /* LWInternalHelper.h in Headers */,
-				69AF787890E4D0B076E6627FC5B24E39 /* LWLayout.h in Headers */,
-				47D22991C6FFEEE7B132B894BE0CE8DE /* LWLayoutEngineer-umbrella.h in Headers */,
-				7855A10C87EF4894A46E723862D92233 /* LWLayoutEngineer.h in Headers */,
-				1BD6D584729A2F5925C7416E85E0BDE7 /* LWLayoutSepc.h in Headers */,
-				D5521356752C63661F542D0C6D25BA49 /* LWLayoutStyle.h in Headers */,
-				C97DBAE49565DCB049C7C759141F66CF /* UIView+LWLayoutable.h in Headers */,
-				70190D2B8052AB26C6246C9B70188094 /* Utils.h in Headers */,
-				D6FC51B1EB57A1323579FD70C3E51026 /* YGEnums.h in Headers */,
-				9246F6FE831ECA333E5CC501ABA9363D /* YGFloatOptional.h in Headers */,
-				001AC07404E1355CDA631FD60C463632 /* YGLayout.h in Headers */,
-				D2E84DAFE947BBF61492DF31853C6755 /* YGMacros.h in Headers */,
-				45CAB990DF1C3C3E58D21C3D89C98350 /* YGNode.h in Headers */,
-				ADF7CA3E020677450555EB525711B13B /* YGNodePrint.h in Headers */,
-				FE3E33CE07E82A17B5568801131AA17F /* YGStyle.h in Headers */,
-				89FADD2AFFC4A2199A13C2AEB3E36213 /* Yoga-internal.h in Headers */,
-				1B12C1237AF8DBA02C7A541E8F609896 /* Yoga.h in Headers */,
-				1175B3CF4903837BC8F45603FA99D990 /* YogaStyle.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9DC6F5AC11E37A1EB45C6473C9E800B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,16 +507,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA9ABB98C7B622FBAD0E22E409F11336 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C553CC7AECF95385023141AAED6ED3D /* LWAssert.h in Headers */,
+				1961A08FC034CAF0BB593F485CF4823C /* LWDefines.h in Headers */,
+				DE4D5B964C2190D373FAA348313440F3 /* LWInternalHelper.h in Headers */,
+				13DA899ECA25A2CE8A4188C6CF8D77B8 /* LWLayout.h in Headers */,
+				E65207B651F61E7B8A6DE5058B9C46D3 /* LWLayoutEngineer-umbrella.h in Headers */,
+				68EEBB9824A36D874549BC2F3BB030BF /* LWLayoutEngineer.h in Headers */,
+				070BC33EE7C09C67517C935CB969402C /* LWLayoutSepc.h in Headers */,
+				70D44A2E79B0B4B6F54306F35A43B171 /* LWLayoutStyle.h in Headers */,
+				CB89C68727BCF73B4463B71FDA8A4411 /* LWYogaUtilities.h in Headers */,
+				FB4C7D847B0612A06F4FB5BA7E0887A9 /* UIView+LWLayoutable.h in Headers */,
+				70B34BA0A36BCAC2F87326841CF377C7 /* Utils.h in Headers */,
+				559D71F1B7FB4F6A230FDD0D2D80A798 /* YGEnums.h in Headers */,
+				501F192A57FB0DFA55B55A20232DAFF7 /* YGFloatOptional.h in Headers */,
+				E7C94BB0773F79E5354A22AA8CD0748C /* YGLayout.h in Headers */,
+				26CF5F0A7C7F412D6DCF30DDCC10F5FA /* YGMacros.h in Headers */,
+				E95AD37FD3565ACEE24B471FBE8749CC /* YGNode.h in Headers */,
+				20C246886D4EFF79A7EF207B5D85CA9B /* YGNodePrint.h in Headers */,
+				3C1C26EF3C557E5C1E40815031BE67A9 /* YGStyle.h in Headers */,
+				8425CBD38946C261CB5D95E124252A22 /* Yoga-internal.h in Headers */,
+				93A241FB36485B5B297843B10EC275BF /* Yoga.h in Headers */,
+				9F89E3C6A1EB0D28F164666D8BC0B3B5 /* YogaStyle.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0BF7A37C90F76654311460576B985206 /* LWLayoutEngineer */ = {
+		06FB94F0FE20DBEB2B2AA66D1BF577EF /* LWLayoutEngineer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A54E749FB85F5B191A70353C2D19DF5 /* Build configuration list for PBXNativeTarget "LWLayoutEngineer" */;
+			buildConfigurationList = 78BD9147850A15E514187A278CF753A9 /* Build configuration list for PBXNativeTarget "LWLayoutEngineer" */;
 			buildPhases = (
-				CA7B37D1B26B4411C6151872B0A980C9 /* Sources */,
-				5BC522A10BC0143D748DD75475CC233C /* Frameworks */,
-				6AB9E053FD2B92C19D42ED2FDF9C2B55 /* Headers */,
+				71A29A20E3E4997961EEDFDBD2F652B5 /* Sources */,
+				03B7786553967ECABB8477A4F7B97E5E /* Frameworks */,
+				DA9ABB98C7B622FBAD0E22E409F11336 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -599,7 +630,7 @@
 			projectRoot = "";
 			targets = (
 				34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */,
-				0BF7A37C90F76654311460576B985206 /* LWLayoutEngineer */,
+				06FB94F0FE20DBEB2B2AA66D1BF577EF /* LWLayoutEngineer */,
 				DE4802044EB3C96DDB43575A674A21CE /* Pods-LWLayoutEngineer_Example */,
 				CAE71B195CE0F54D26F8A04FC9CD8EBD /* Pods-LWLayoutEngineer_Tests */,
 			);
@@ -607,25 +638,34 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		71A29A20E3E4997961EEDFDBD2F652B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD8F6472BC8DE15D1992C8EB683AB3CB /* LWInternalHelper.m in Sources */,
+				3A985E75A7088472FC72F4215A32230E /* LWLayout.m in Sources */,
+				87B4518628EC5E18253AA3677FC02505 /* LWLayoutEngineer-dummy.m in Sources */,
+				FAD0ED570823C07A40BDAD1A08395834 /* LWLayoutSepc.m in Sources */,
+				280CA51623181DDE1C4138E696CF8758 /* LWLayoutStyle.m in Sources */,
+				7680CC7C79AAEFC392588747FA351AE1 /* LWYogaUtilities.m in Sources */,
+				B4B35C8915D2B0109D4F7565934BBB45 /* UIView+LWLayoutable.m in Sources */,
+				77085572B023A23FB52338D26680D819 /* Utils.cpp in Sources */,
+				06E37CA5EA1E19615C13025702901DF2 /* YGEnums.cpp in Sources */,
+				C6FDD11BE2FEC4AF0E4D279CB253CB37 /* YGFloatOptional.cpp in Sources */,
+				0C6BA7A705D81221B109B7ADD56E474C /* YGLayout.cpp in Sources */,
+				67BB864B2D8E6E2E7B117F11D2014665 /* YGNode.cpp in Sources */,
+				D81F5504F1A4415380A1C765F3166B00 /* YGNodePrint.cpp in Sources */,
+				D32F978FD91918DE89B1CA9C1A5BF21A /* YGStyle.cpp in Sources */,
+				A08AD1DEF6E05DB66437BF989FC54F21 /* Yoga.cpp in Sources */,
+				0A87BC0D458620A77EFAD2BD3496A9AD /* YogaStyle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A21F0DBE8BC94D16479D344B5D69BD38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				30D6B3357D33E90293231E85F83A22B2 /* Pods-LWLayoutEngineer_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA7B37D1B26B4411C6151872B0A980C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C8B0173A8E4199B9788543EE0AE1D166 /* LWInternalHelper.m in Sources */,
-				CC933A1F377B504D09EB7B1FFE8EF277 /* LWLayout.m in Sources */,
-				30FB5C1B5D6467C33BF8953B28C8B89D /* LWLayoutEngineer-dummy.m in Sources */,
-				B6FCC821AE8844CB3663B1A16B1D4BB2 /* LWLayoutSepc.m in Sources */,
-				C77997AC7E25A3D7152F5C3444664E2B /* LWLayoutStyle.m in Sources */,
-				A4D7F19246AF8EBA8109A5AE863F2BC9 /* UIView+LWLayoutable.m in Sources */,
-				EC5A871776F9747BE9105BE751AFE2B1 /* YogaStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,7 +699,7 @@
 		3F435D821C4226BC2B8C601A6E728CE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LWLayoutEngineer;
-			target = 0BF7A37C90F76654311460576B985206 /* LWLayoutEngineer */;
+			target = 06FB94F0FE20DBEB2B2AA66D1BF577EF /* LWLayoutEngineer */;
 			targetProxy = 08E63220FB8B79928619CE4A4CD258C2 /* PBXContainerItemProxy */;
 		};
 		BEA37B1405E85B0E5EAF01ED9CA1E323 /* PBXTargetDependency */ = {
@@ -704,7 +744,36 @@
 			};
 			name = Release;
 		};
-		339E4CD8875E7D8C11763F1E1DF8A9F2 /* Release */ = {
+		220A35C36CE62ED535C37FE071EB391C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BA63CD049DC171087937802CD072B0 /* LWLayoutEngineer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LWLayoutEngineer/LWLayoutEngineer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LWLayoutEngineer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LWLayoutEngineer/LWLayoutEngineer.modulemap";
+				PRODUCT_NAME = LWLayoutEngineer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2416E819A9BA7EF8DDF6DFBFF302A7BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41BA63CD049DC171087937802CD072B0 /* LWLayoutEngineer.xcconfig */;
 			buildSettings = {
@@ -794,35 +863,6 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		54604EE6B0A471770A323069CAA3C435 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41BA63CD049DC171087937802CD072B0 /* LWLayoutEngineer.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LWLayoutEngineer/LWLayoutEngineer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LWLayoutEngineer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LWLayoutEngineer/LWLayoutEngineer.modulemap";
-				PRODUCT_NAME = LWLayoutEngineer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1048,20 +1088,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A54E749FB85F5B191A70353C2D19DF5 /* Build configuration list for PBXNativeTarget "LWLayoutEngineer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				54604EE6B0A471770A323069CAA3C435 /* Debug */,
-				339E4CD8875E7D8C11763F1E1DF8A9F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */,
 				827269710C98D60C14D46BC6AF9BF728 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78BD9147850A15E514187A278CF753A9 /* Build configuration list for PBXNativeTarget "LWLayoutEngineer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				220A35C36CE62ED535C37FE071EB391C /* Debug */,
+				2416E819A9BA7EF8DDF6DFBFF302A7BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

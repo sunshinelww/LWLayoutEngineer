@@ -10,7 +10,6 @@
 
 @implementation UIView (LWLayoutable)
 
-
 - (LWLayoutElementType)layoutElementType{
     return LWLayoutElementTypeView;
 }
@@ -24,8 +23,23 @@
     return style;
 }
 
+- (LWLayoutSepc *)layoutSpecThatFits:(CGSize)constrainedSize{
+    return nil; //有子类view自己实现
+}
+
 - (LWLayout *)layoutThatFits:(CGSize)constrainedSize{
-    return nil;
+    LWLayoutSepc *layoutSpec = [self layoutSpecThatFits:constrainedSize];
+    if (!layoutSpec) { //  没有使用layoutSpec，那么采用手动布局
+        CGSize size = [self sizeThatFits:constrainedSize];
+        return [LWLayout layoutWithLayoutElement:self size:size];
+    }
+    LWLayout *layout = [layoutSpec layoutThatFits:constrainedSize];
+    BOOL isFinalLayoutElement = (layout.layoutElement != self);
+    if (isFinalLayoutElement) {
+        layout.position = CGPointZero;
+        layout = [LWLayout layoutWithLayoutElement:self size:layout.size sublayoutElems:@[layout]];
+    }
+    return layout;
 }
 
 - (nonnull NSArray<id<LWLayoutable>> *)sublayoutElements {

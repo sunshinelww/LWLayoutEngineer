@@ -34,13 +34,14 @@ TODO: Add long description of the pod here.
       core.public_header_files = [
         'LWLayoutEngineer/Classes/CoreSource/YogaCore/*.h',
         'LWLayoutEngineer/Classes/CoreSource/YogaKit/*.h',
+        'LWLayoutEngineer/Classes/CoreSource/Layout/*.h',
       ]
-      core.source_files = 'LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,m}'
+      core.source_files = 'LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,cpp,m}'
   end
 
   s.subspec 'Base' do |base|
   	base.public_header_files = 'LWLayoutEngineer/Classes/Base/*.h'
-  	base.source_files = 'LWLayoutEngineer/Classes/Base/*.{h,c,m}'
+  	base.source_files = 'LWLayoutEngineer/Classes/Base/*.{h,c,cpp,m}'
   end
   
   # s.resource_bundles = {

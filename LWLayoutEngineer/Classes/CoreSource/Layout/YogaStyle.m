@@ -7,27 +7,14 @@
 
 #import "YogaStyle.h"
 #import "LWInternalHelper.h"
-
-#define YG_PROPERTY(type, lowercased_name, capitalized_name)    \
-- (type)lowercased_name                                         \
-{                                                               \
-return (type)YGNodeStyleGet##capitalized_name(self.yogaNode);           \
-}                                                               \
-\
-- (void)set##capitalized_name:(type)lowercased_name             \
-{                                                               \
-YGNodeStyleSet##capitalized_name(self.yogaNode, lowercased_name); \
-}
-
+#import "LWYogaUtilities.h"
 
 static YGConfigRef globalConfig;
 
 @implementation YogaStyle{
     YGNodeRef _yogaNode;
+    
 }
-
-@dynamic flexDirection,position,flexWrap,justifyContent,alignItem,alignContent,alignSelf;
-@dynamic flexGrow,flexShrink,flexBasis;
 
 + (void)initialize{
     [super initialize];
@@ -48,7 +35,51 @@ static YGConfigRef globalConfig;
     return _yogaNode;
 }
 
-YG_PROPERTY(LWFBDirection, direction, Direction);
+- (void)setFlexDirection:(LWFBDirection)flexDirection{
+    _flexDirection = flexDirection;
+    YGNodeStyleSetFlexDirection(self.yogaNode, yogaFlexDirection(flexDirection));
+}
+
+- (void)setFlexWrap:(LWFBWrap)flexWrap{
+    _flexWrap = flexWrap;
+    YGNodeStyleSetFlexWrap(self.yogaNode, yogaWrap(flexWrap));
+}
+
+- (void)setJustifyContent:(LWFBJustifyContent)justifyContent{
+    _justifyContent = justifyContent;
+    YGNodeStyleSetJustifyContent(self.yogaNode, yogaJustifyContent(justifyContent));
+}
+
+- (void)setAlignItems:(LWFBAlignItem)alignItems{
+    _alignItems = alignItems;
+    YGNodeStyleSetAlignItems(self.yogaNode, yogaAlignItems(alignItems));
+}
+
+- (void)setAlignContent:(LWFBAlignContent)alignContent{
+    _alignContent = alignContent;
+    YGNodeStyleSetAlignContent(self.yogaNode, yogaAlignContent(alignContent));
+}
+
+- (void)setAlignSelf:(LWFBAlignSelf)alignSelf{
+    _alignSelf = alignSelf;
+    YGNodeStyleSetAlignSelf(self.yogaNode, yogaAlignSelf(alignSelf));
+}
+
+- (void)setFlexGrow:(CGFloat)flexGrow{
+    _flexGrow = flexGrow;
+    YGNodeStyleSetFlexGrow(self.yogaNode, flexGrow);
+}
+
+- (void)setFlexShrink:(CGFloat)flexShrink{
+    _flexShrink = flexShrink;
+    YGNodeStyleSetFlexShrink(self.yogaNode, flexShrink);
+}
+
+- (void)setFlexBasis:(CGFloat)flexBasis{
+    _flexBasis = flexBasis;
+    YGNodeStyleSetFlexBasis(self.yogaNode, flexBasis);
+}
+
 
 - (void)dealloc{
     YGNodeFree(_yogaNode);

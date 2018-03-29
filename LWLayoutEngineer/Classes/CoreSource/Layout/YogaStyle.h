@@ -9,25 +9,26 @@
 #import "Yoga.h"
 
 typedef NS_ENUM(NSUInteger, LWFBDirection){
-    LWFBDirectionRow,
-    LWFBDirectionRowReverse,
     LWFBDirectionColumn,
-    LWFBDirectionColumnReverse
+    LWFBDirectionColumnReverse,
+    LWFBDirectionRow,
+    LWFBDirectionRowReverse
 };
 
 typedef NS_ENUM(NSUInteger, LWFBJustifyContent){
     LWFBJustifyContentStart,
-    LWFBJustifyContentEnd,
     LWFBJustifyContentCenter,
+    LWFBJustifyContentEnd,
     LWFBJustifyContentSpaceBetween,
-    LWFBJustifyContentSpaceAround
+    LWFBJustifyContentSpaceAround,
+    LWFBJustifyContentSpaceEvenly,
 };
 
 typedef NS_ENUM(NSUInteger, LWFBAlignItem) {
-    LWFBAlignItemStretch, //Default value. Lines stretch to take up the remaining space
-    LWFBAlignItemStart,
-    LWFBAlignItemEnd,
+    LWFBAlignItemStart = 1,
     LWFBAlignItemCenter,
+    LWFBAlignItemEnd,
+    LWFBAlignItemStretch, //Default value. Lines stretch to take up the remaining space
     LWFBAlignItemBaseline //向第一个Item的baseline对齐，适用于textLabel
 };
 
@@ -52,17 +53,15 @@ typedef NS_ENUM(NSUInteger, LWFBAlignSelf) {
 };
 
 typedef NS_ENUM(NSUInteger, LWFBWrap) {
-    NoWrap,
-    Wrap,
-    WrapReverse
+    LWFBWrapNoWrap,
+    LWFBWrapWrap,
+    LWFBWrapWrapReverse
 };
 
 typedef NS_ENUM(NSUInteger, LWFBPositionType) {
     LWFBPositionTypeRelative,
     LWFBPositionTypeAbsolute
 };
-
-
 
 
 @interface YogaStyle : NSObject
@@ -73,7 +72,7 @@ typedef NS_ENUM(NSUInteger, LWFBPositionType) {
 
 @property (nonatomic, assign) LWFBDirection flexDirection;
 
-@property (nonatomic, assign) LWFBPositionType position;
+@property (nonatomic, assign) LWFBPositionType positionType;
 
 @property (nonatomic, assign) LWFBWrap flexWrap;
 
