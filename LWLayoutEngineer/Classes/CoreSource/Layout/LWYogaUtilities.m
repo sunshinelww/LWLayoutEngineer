@@ -66,3 +66,14 @@ YGWrap yogaWrap(LWFBWrap wrap){
     }
 }
 
+void YGRemoveAllChildren(const YGNodeRef node)
+{
+    if (node == NULL) {
+        return;
+    }
+    
+    while (YGNodeGetChildCount(node) > 0) {
+        YGNodeRemoveChild(node, YGNodeGetChild(node, YGNodeGetChildCount(node) - 1));
+    }
+}
+

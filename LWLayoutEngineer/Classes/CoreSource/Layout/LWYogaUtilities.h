@@ -14,3 +14,4 @@ YGAlign yogaAlignItems(LWFBAlignItem alignItem);
 YGAlign yogaAlignContent(LWFBAlignContent alignContent);
 YGAlign yogaAlignSelf(LWFBAlignSelf alignSelf);
 YGWrap  yogaWrap(LWFBWrap wrap);
+void YGRemoveAllChildren(const YGNodeRef node);
