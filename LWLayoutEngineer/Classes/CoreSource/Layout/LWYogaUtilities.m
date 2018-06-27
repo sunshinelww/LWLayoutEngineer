@@ -7,7 +7,7 @@
 
 #import "LWYogaUtilities.h"
 
-YGFlexDirection yogaFlexDirection(LWFBDirection flexDirection){
+YGFlexDirection yogaFlexDirection(LWFBDirection flexDirection) {
     switch (flexDirection) {
         case LWFBDirectionRow:            return YGFlexDirectionRow;
         case LWFBDirectionRowReverse:     return YGFlexDirectionRowReverse;
@@ -16,7 +16,7 @@ YGFlexDirection yogaFlexDirection(LWFBDirection flexDirection){
     }
 }
 
-YGJustify yogaJustifyContent(LWFBJustifyContent justifyContent){
+YGJustify yogaJustifyContent(LWFBJustifyContent justifyContent) {
     switch (justifyContent) {
         case LWFBJustifyContentStart:          return YGJustifyFlexStart;
         case LWFBJustifyContentCenter:         return YGJustifyCenter;
@@ -27,7 +27,7 @@ YGJustify yogaJustifyContent(LWFBJustifyContent justifyContent){
     }
 }
 
-YGAlign yogaAlignItems(LWFBAlignItem aligItems){
+YGAlign yogaAlignItems(LWFBAlignItem aligItems) {
     switch (aligItems) {
         case LWFBAlignItemStart:    return YGAlignFlexStart;
         case LWFBAlignItemEnd:      return YGAlignFlexEnd;
@@ -37,7 +37,7 @@ YGAlign yogaAlignItems(LWFBAlignItem aligItems){
     }
 }
 
-YGAlign yogaAlignContent(LWFBAlignContent alignContent){
+YGAlign yogaAlignContent(LWFBAlignContent alignContent) {
     switch (alignContent) {
         case LWFBAlignContentStart:           return YGAlignFlexStart;
         case LWFBAlignContentCenter:          return YGAlignCenter;
@@ -47,7 +47,7 @@ YGAlign yogaAlignContent(LWFBAlignContent alignContent){
     }
 }
 
-YGAlign yogaAlignSelf(LWFBAlignSelf alignSelf){
+YGAlign yogaAlignSelf(LWFBAlignSelf alignSelf) {
     switch (alignSelf) {
         case LWFBAlignSelfAuto:       return YGAlignAuto;
         case LWFBAlignSelfStretch:    return YGAlignStretch;
@@ -58,7 +58,7 @@ YGAlign yogaAlignSelf(LWFBAlignSelf alignSelf){
     }
 }
 
-YGWrap yogaWrap(LWFBWrap wrap){
+YGWrap yogaWrap(LWFBWrap wrap) {
     switch (wrap) {
         case LWFBWrapWrap:          return YGWrapWrap;
         case LWFBWrapNoWrap:        return YGWrapNoWrap;
@@ -66,8 +66,7 @@ YGWrap yogaWrap(LWFBWrap wrap){
     }
 }
 
-void YGRemoveAllChildren(const YGNodeRef node)
-{
+void YGRemoveAllChildren(const YGNodeRef node) {
     if (node == NULL) {
         return;
     }

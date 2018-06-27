@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 布局的规范抽象类，用来辅助view的布局
  **/
-@interface LWLayoutSepc : NSObject <LWLayoutable>
+@interface LWLayoutSpec : NSObject <LWLayoutable>
 
 /**
  * 代表第一个子元素

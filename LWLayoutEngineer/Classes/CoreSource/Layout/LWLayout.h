@@ -62,6 +62,9 @@ FOUNDATION_EXTERN BOOL LWPointIsNull(CGPoint point);
 
 + (instancetype)layoutWithLayoutElement:(id<LWLayoutable>)layoutElement
                                  size:(CGSize)size;
+
+- (LWLayout *)filteredViewLayoutTree;
+
 @end
 
 NS_ASSUME_NONNULL_END

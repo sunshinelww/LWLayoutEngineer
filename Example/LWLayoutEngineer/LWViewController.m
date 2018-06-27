@@ -7,21 +7,40 @@
 //
 
 #import "LWViewController.h"
-#import "Yoga.h"
 #import "UIView+LWLayoutable.h"
-
+#import "LWLayoutView.h"
+#import "LWYogaLayoutSpec.h"
+#import "YogaStyle.h"
 
 @interface LWViewController ()
+
+@property (nonatomic, strong)LWLayoutView *contentView;
 
 @end
 
 @implementation LWViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.contentView = [[LWLayoutView alloc] init];
+    self.contentView.layoutStyle.preferredSize = CGSizeMake(200, 300);
+    __weak typeof(self) weakSelf = self;
+    self.view.layoutSpecBlock = ^LWLayoutSpec *(CGSize constrainedSize) {
+        LWYogaLayoutSpec *layoutSpec = [[LWYogaLayoutSpec alloc] init];
+        layoutSpec.layoutStyle.yogaStyle.flexDirection = LWFBDirectionRow;
+        layoutSpec.layoutStyle.yogaStyle.justifyContent = LWFBJustifyContentCenter;
+        layoutSpec.layoutStyle.yogaStyle.alignItems = LWFBAlignItemCenter;
+        layoutSpec.child = weakSelf.contentView;
+        weakSelf.contentView.layoutStyle.yogaStyle.width = YGPointValue(200);
+        weakSelf.contentView.layoutStyle.yogaStyle.height = YGPointValue(300);
+        return layoutSpec;
+    };
 }
 
+
+- (void)viewWillLayoutSubviews {
+    LWLayout * layout = [self.view layoutThatFits:self.view.frame.size];
+    
+}
 
 @end

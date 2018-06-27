@@ -5,22 +5,22 @@
 //  Created by sunshinelww on 2018/3/27.
 //
 
-#import "LWLayoutSepc.h"
+#import "LWLayoutSpec.h"
 #import "LWAssert.h"
 
-@interface LWLayoutSepc(){
+@interface LWLayoutSpec(){
     LWLayoutStyle  *_layoutStyle;
     NSMutableArray *_childrenArray;
 }
 
 @end
 
-@implementation LWLayoutSepc
+@implementation LWLayoutSpec
 
 @dynamic children;
 @dynamic child;
 
-- (instancetype)init{
+- (instancetype)init {
     self = [super init];
     if (self) {
         _childrenArray = [NSMutableArray array];
@@ -28,22 +28,22 @@
     return self;
 }
 
-- (LWLayoutElementType)layoutElementType{
+- (LWLayoutElementType)layoutElementType {
     return LWLayoutElementTypeSpec;
 }
 
-- (LWLayoutStyle *)layoutStyle{
+- (LWLayoutStyle *)layoutStyle {
     if (!_layoutStyle) {
-        _layoutStyle = [[LWLayoutStyle alloc] init];
+        _layoutStyle = [[LWLayoutStyle alloc] initWithLayoutElement:self];
     }
     return _layoutStyle;
 }
 
-- (LWLayout *)layoutThatFits:(CGSize)constrainedSize{
+- (LWLayout *)layoutThatFits:(CGSize)constrainedSize {
     return [LWLayout layoutWithLayoutElement:self size:CGSizeZero];
 }
 
-- (void)setChild:(id<LWLayoutable>)child{
+- (void)setChild:(id<LWLayoutable>)child {
     if (child) {
         _childrenArray[0] = child;
     }
@@ -54,7 +54,7 @@
     }
 }
 
-- (void)setChildren:(NSArray<id<LWLayoutable>> *)children{
+- (void)setChildren:(NSArray<id<LWLayoutable>> *)children {
     [_childrenArray removeAllObjects];
     
     NSUInteger i =0 ;
@@ -65,7 +65,7 @@
     }
 }
 
-- (nullable NSArray<id<LWLayoutable>>*)children{
+- (nullable NSArray<id<LWLayoutable>>*)children {
     return [_childrenArray copy];
 }
 

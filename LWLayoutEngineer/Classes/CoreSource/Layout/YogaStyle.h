@@ -63,6 +63,9 @@ typedef NS_ENUM(NSUInteger, LWFBPositionType) {
     LWFBPositionTypeAbsolute
 };
 
+extern YGValue YGPointValue(CGFloat value);
+
+@protocol LWLayoutable;
 
 @interface YogaStyle : NSObject
 
@@ -91,5 +94,51 @@ typedef NS_ENUM(NSUInteger, LWFBPositionType) {
 @property (nonatomic, assign) CGFloat flexShrink;
 
 @property (nonatomic, assign) CGFloat flexBasis;
+
+#pragma mark YGValue
+
+@property (nonatomic, readwrite, assign) YGValue left;
+@property (nonatomic, readwrite, assign) YGValue top;
+@property (nonatomic, readwrite, assign) YGValue right;
+@property (nonatomic, readwrite, assign) YGValue bottom;
+@property (nonatomic, readwrite, assign) YGValue start;
+@property (nonatomic, readwrite, assign) YGValue end;
+
+@property (nonatomic, readwrite, assign) YGValue marginLeft;
+@property (nonatomic, readwrite, assign) YGValue marginTop;
+@property (nonatomic, readwrite, assign) YGValue marginRight;
+@property (nonatomic, readwrite, assign) YGValue marginBottom;
+@property (nonatomic, readwrite, assign) YGValue marginStart;
+@property (nonatomic, readwrite, assign) YGValue marginEnd;
+@property (nonatomic, readwrite, assign) YGValue marginHorizontal;
+@property (nonatomic, readwrite, assign) YGValue marginVertical;
+@property (nonatomic, readwrite, assign) YGValue margin;
+
+@property (nonatomic, readwrite, assign) YGValue paddingLeft;
+@property (nonatomic, readwrite, assign) YGValue paddingTop;
+@property (nonatomic, readwrite, assign) YGValue paddingRight;
+@property (nonatomic, readwrite, assign) YGValue paddingBottom;
+@property (nonatomic, readwrite, assign) YGValue paddingStart;
+@property (nonatomic, readwrite, assign) YGValue paddingEnd;
+@property (nonatomic, readwrite, assign) YGValue paddingHorizontal;
+@property (nonatomic, readwrite, assign) YGValue paddingVertical;
+@property (nonatomic, readwrite, assign) YGValue padding;
+
+@property (nonatomic, readwrite, assign) CGFloat borderLeftWidth;
+@property (nonatomic, readwrite, assign) CGFloat borderTopWidth;
+@property (nonatomic, readwrite, assign) CGFloat borderRightWidth;
+@property (nonatomic, readwrite, assign) CGFloat borderBottomWidth;
+@property (nonatomic, readwrite, assign) CGFloat borderStartWidth;
+@property (nonatomic, readwrite, assign) CGFloat borderEndWidth;
+@property (nonatomic, readwrite, assign) CGFloat borderWidth;
+
+@property (nonatomic, readwrite, assign) YGValue width;
+@property (nonatomic, readwrite, assign) YGValue height;
+@property (nonatomic, readwrite, assign) YGValue minWidth;
+@property (nonatomic, readwrite, assign) YGValue minHeight;
+@property (nonatomic, readwrite, assign) YGValue maxWidth;
+@property (nonatomic, readwrite, assign) YGValue maxHeight;
+
+- (instancetype)initWithLayoutElement:(id<LWLayoutable>)layoutElem NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -10,25 +10,33 @@
 
 @implementation UIView (LWLayoutable)
 
-- (LWLayoutElementType)layoutElementType{
+- (LWLayoutElementType)layoutElementType {
     return LWLayoutElementTypeView;
 }
 
-- (LWLayoutStyle *)layoutStyle{
+- (LWLayoutStyle *)layoutStyle {
     LWLayoutStyle *style = objc_getAssociatedObject(self, _cmd);
     if (!style) {
-        style = [[LWLayoutStyle alloc] init];
+        style = [[LWLayoutStyle alloc] initWithLayoutElement:self];
         objc_setAssociatedObject(self, _cmd, style, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return style;
 }
 
-- (LWLayoutSepc *)layoutSpecThatFits:(CGSize)constrainedSize{
+- (LWLayoutSpecBlock)layoutSpecBlock {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setLayoutSpecBlock:(LWLayoutSpecBlock)layoutSpecBlock {
+    objc_setAssociatedObject(self, @selector(layoutSpecBlock), layoutSpecBlock, OBJC_ASSOCIATION_COPY);
+}
+
+- (LWLayoutSpec *)layoutSpecThatFits:(CGSize)constrainedSize {
     return nil; //有子类view自己实现
 }
 
-- (LWLayout *)layoutThatFits:(CGSize)constrainedSize{
-    LWLayoutSepc *layoutSpec = [self layoutSpecThatFits:constrainedSize];
+- (LWLayout *)layoutThatFits:(CGSize)constrainedSize {
+    LWLayoutSpec *layoutSpec = [self layoutableThatFits:constrainedSize];
     if (!layoutSpec) { //  没有使用layoutSpec，那么采用手动布局
         CGSize size = [self sizeThatFits:constrainedSize];
         return [LWLayout layoutWithLayoutElement:self size:size];
@@ -39,7 +47,16 @@
         layout.position = CGPointZero;
         layout = [LWLayout layoutWithLayoutElement:self size:layout.size sublayoutElems:@[layout]];
     }
+    
     return layout;
+}
+
+- (LWLayoutSpec *)layoutableThatFits:(CGSize)constrainedSize {
+    if (self.layoutSpecBlock != nil) {
+        return self.layoutSpecBlock(constrainedSize);
+    } else {
+        return [self layoutSpecThatFits:constrainedSize];
+    }
 }
 
 - (nonnull NSArray<id<LWLayoutable>> *)sublayoutElements {

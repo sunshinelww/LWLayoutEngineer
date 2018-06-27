@@ -5,8 +5,8 @@
 //  Created by sunshinelww on 2018/3/29.
 //
 
-#import "LWLayoutSepc.h"
+#import "LWLayoutSpec.h"
 
-@interface LWYogaLayoutSepc : LWLayoutSepc
+@interface LWYogaLayoutSpec : LWLayoutSpec
 
 @end

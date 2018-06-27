@@ -14,10 +14,11 @@
 
 @dynamic width, height, preferredSize;
 
-- (instancetype)init{
+- (instancetype)initWithLayoutElement:(id<LWLayoutable>)layoutElem {
     self = [super init];
     if (self) {
         _size = CGSizeZero;
+        _layoutElement = layoutElem;
     }
     return self;
 }
@@ -26,35 +27,35 @@
     return _size.width;
 }
 
-- (void)setWidth:(CGFloat)width{
+- (void)setWidth:(CGFloat)width {
     CGSize newSize = _size;
     newSize.width = width;
     _size = newSize;
 }
 
-- (CGFloat)height{
+- (CGFloat)height {
     return _size.height;
 }
 
-- (void)setHeight:(CGFloat)height{
+- (void)setHeight:(CGFloat)height {
     CGSize newSize = _size;
     newSize.height = height;
     _size = newSize;
 }
 
-- (CGSize)preferredSize{
+- (CGSize)preferredSize {
     return CGSizeMake(_size.width, _size.height);
 }
 
-- (void)setPreferredSize:(CGSize)preferredSize{
+- (void)setPreferredSize:(CGSize)preferredSize {
     CGSize newSize = _size;
     newSize.width = preferredSize.width;
     newSize.height = preferredSize.height;
 }
 
-- (YogaStyle *)yogaStyle{
+- (YogaStyle *)yogaStyle {
     if (!_yogaStyle) { //设置默认的yoGaStyle
-        _yogaStyle = [[YogaStyle alloc] init];
+        _yogaStyle = [[YogaStyle alloc] initWithLayoutElement:_layoutElement];
     }
     return _yogaStyle;
 }

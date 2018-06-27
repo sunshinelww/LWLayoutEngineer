@@ -8,7 +8,7 @@
 #import "LWInternalHelper.h"
 #import "LWAssert.h"
 
-FOUNDATION_EXTERN CGFloat LWScreenScale(){
+FOUNDATION_EXTERN CGFloat LWScreenScale() {
     static CGFloat __scale = 0.f;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
