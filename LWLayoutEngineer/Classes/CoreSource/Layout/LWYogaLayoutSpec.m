@@ -29,7 +29,7 @@
     for (id<LWLayoutable> layoutElement in child) {
         LWLayoutEngineerAssert([layoutElement conformsToProtocol:@protocol(LWLayoutable)], @"child must conformsToProtocol LWLayoutable");
         if ([layoutElement isKindOfClass:[UIView class]]) {
-            [layoutElement.layoutStyle.yogaStyle mergeFromOtherYogaStyle:[(UIView *)layoutElement layoutableThatFits:constrainedSize]];
+            [layoutElement.layoutStyle.yogaStyle mergeFromOtherYogaStyle:[(UIView *)layoutElement layoutableThatFits:constrainedSize].layoutStyle.yogaStyle];
         }
         const YGNodeRef childNode = layoutElement.layoutStyle.yogaStyle.yogaNode;
         YGNodeRef parent = YGNodeGetParent(childNode);
