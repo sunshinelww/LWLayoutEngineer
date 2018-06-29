@@ -113,6 +113,14 @@ static inline BOOL LWLayoutIsFlattened(LWLayout *layout)
     return subnodeFrame;
 }
 
+- (CGRect)frameForElement:(id<LWLayoutable>)layoutElement {
+    NSValue *value = self.elementToRectMap ? [self.elementToRectMap objectForKey:layoutElement] : nil;
+    if (value == nil) {
+        return CGRectNull;
+    }
+    return [value CGRectValue];
+}
+
 - (LWLayout *)filteredViewLayoutTree {
     struct LayoutContext {
         LWLayout *layout;

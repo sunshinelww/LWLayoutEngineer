@@ -65,6 +65,9 @@ FOUNDATION_EXTERN BOOL LWPointIsNull(CGPoint point);
 
 - (LWLayout *)filteredViewLayoutTree;
 
+- (CGRect)frameForElement:(id<LWLayoutable>)layoutElement;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

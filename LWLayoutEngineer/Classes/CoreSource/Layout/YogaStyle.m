@@ -82,6 +82,7 @@ YG_VALUE_EDGE_PROPERTY(lowercased_name, capitalized_name, capitalized_name, YGEd
         default:                                                                            \
             NSAssert(NO, @"Not implemented");                                               \
     }                                                                                       \
+   _setFlag.lowercased_name##Set = 1;                                                       \
 }
 
 #define YG_AUTO_VALUE_PROPERTY(lowercased_name, capitalized_name)                           \
@@ -105,6 +106,7 @@ YG_VALUE_EDGE_PROPERTY(lowercased_name, capitalized_name, capitalized_name, YGEd
         default:                                                                            \
             NSAssert(NO, @"Not implemented");                                               \
     }                                                                                       \
+    _setFlag.lowercased_name##Set = 1;                                                      \
 }
 
 YGValue YGPointValue(CGFloat value)
@@ -138,31 +140,37 @@ YGValue YGPointValue(CGFloat value)
 
 - (void)setFlexDirection:(LWFBDirection)flexDirection {
     _flexDirection = flexDirection;
+    _setFlag.flexDirectionSet = 1;
     YGNodeStyleSetFlexDirection(self.yogaNode, yogaFlexDirection(flexDirection));
 }
 
 - (void)setFlexWrap:(LWFBWrap)flexWrap {
     _flexWrap = flexWrap;
+    _setFlag.flexWrapSet = 1;
     YGNodeStyleSetFlexWrap(self.yogaNode, yogaWrap(flexWrap));
 }
 
 - (void)setJustifyContent:(LWFBJustifyContent)justifyContent {
     _justifyContent = justifyContent;
+    _setFlag.justifyContentSet = 1;
     YGNodeStyleSetJustifyContent(self.yogaNode, yogaJustifyContent(justifyContent));
 }
 
 - (void)setAlignItems:(LWFBAlignItem)alignItems {
     _alignItems = alignItems;
+    _setFlag.alignItemsSet = 1;
     YGNodeStyleSetAlignItems(self.yogaNode, yogaAlignItems(alignItems));
 }
 
 - (void)setAlignContent:(LWFBAlignContent)alignContent {
     _alignContent = alignContent;
+    _setFlag.alignContentSet = 1;
     YGNodeStyleSetAlignContent(self.yogaNode, yogaAlignContent(alignContent));
 }
 
 - (void)setAlignSelf:(LWFBAlignSelf)alignSelf {
     _alignSelf = alignSelf;
+    _setFlag.alignSelfSet = 1;
     YGNodeStyleSetAlignSelf(self.yogaNode, yogaAlignSelf(alignSelf));
 }
 
@@ -204,6 +212,22 @@ YG_VALUE_PROPERTY(minWidth, MinWidth)
 YG_VALUE_PROPERTY(minHeight, MinHeight)
 YG_VALUE_PROPERTY(maxWidth, MaxWidth)
 YG_VALUE_PROPERTY(maxHeight, MaxHeight)
+
+- (void)mergeFromOtherYogaStyle:(YogaStyle *)yogaStyle {
+    LWYogaStyleFlags flag = yogaStyle.setFlag;
+    if (flag.flexDirectionSet) {
+        self.flexDirection = yogaStyle.flexDirection;
+    }
+    if (flag.justifyContentSet) {
+        self.justifyContent = yogaStyle.justifyContent;
+    }
+    if (flag.widthSet) {
+        self.width = yogaStyle.width;
+    }
+    if (flag.heightSet) {
+        self.height = yogaStyle.height;
+    }
+}
 
 - (void)dealloc {
     YGNodeFree(_yogaNode);

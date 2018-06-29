@@ -63,6 +63,32 @@ typedef NS_ENUM(NSUInteger, LWFBPositionType) {
     LWFBPositionTypeAbsolute
 };
 
+typedef struct LWYogaStyleFlags {
+    unsigned flexDirectionSet:1;
+    unsigned positionTypeSet:1;
+    unsigned flexWrapSet:1;
+    unsigned justifyContentSet:1;
+    unsigned alignItemsSet:1;
+    unsigned alignContentSet:1;
+    unsigned alignSelfSet:1;
+    unsigned flexGrowSet:1;
+    unsigned flexShrinkSet:1;
+    unsigned leftSet:1;
+    unsigned rightSet:1;
+    unsigned topSet:1;
+    unsigned bottomSet:1;
+    unsigned marginLeftSet:1;
+    unsigned marginTopSet:1;
+    unsigned marginRightSet:1;
+    unsigned marginBottomSet:1;
+    unsigned widthSet:1;
+    unsigned heightSet:1;
+    unsigned maxWidthSet:1;
+    unsigned minWidthSet:1;
+    unsigned maxHeightSet:1;
+    unsigned minHeightSet:1;
+} LWYogaStyleFlags;
+
 extern YGValue YGPointValue(CGFloat value);
 
 @protocol LWLayoutable;
@@ -139,6 +165,10 @@ extern YGValue YGPointValue(CGFloat value);
 @property (nonatomic, readwrite, assign) YGValue maxWidth;
 @property (nonatomic, readwrite, assign) YGValue maxHeight;
 
+@property (nonatomic, assign, readonly) LWYogaStyleFlags setFlag;
+
 - (instancetype)initWithLayoutElement:(id<LWLayoutable>)layoutElem NS_DESIGNATED_INITIALIZER;
+
+- (void)mergeFromOtherYogaStyle:(YogaStyle *)yogaStyle;
 
 @end

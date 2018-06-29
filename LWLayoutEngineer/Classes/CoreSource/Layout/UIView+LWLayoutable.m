@@ -7,8 +7,33 @@
 
 #import "UIView+LWLayoutable.h"
 #import <objc/runtime.h>
+#import "LWInternalHelper.h"
 
 @implementation UIView (LWLayoutable)
+
+
++ (void)load { //hook UIView的LayoutSubViews方法
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        exchangeMethod(self, @selector(layoutSubviews), @selector(LW_layoutSubviews));
+    });
+}
+
+- (void)LW_layoutSubviews {
+    if (self.layoutStyle.specLayoutEnabled) {
+        [self applySubLayouts];
+    }
+    [self LW_layoutSubviews];
+}
+
+- (void)applySubLayouts {
+    for (UIView *view in self.subviews) {
+        CGRect frame = [self.caculatedViewLayout frameForElement:view];
+        if (!CGRectIsNull(frame)) {
+            view.frame = frame;
+        }
+    }
+}
 
 - (LWLayoutElementType)layoutElementType {
     return LWLayoutElementTypeView;
@@ -31,8 +56,16 @@
     objc_setAssociatedObject(self, @selector(layoutSpecBlock), layoutSpecBlock, OBJC_ASSOCIATION_COPY);
 }
 
+- (LWLayout *)caculatedViewLayout {
+    return objc_getAssociatedObject(self, @selector(caculatedViewLayout));
+}
+
+- (void)setCaculatedViewLayout:(LWLayout *)pendingViewLayout {
+    objc_setAssociatedObject(self, @selector(caculatedViewLayout), pendingViewLayout, OBJC_ASSOCIATION_RETAIN);
+}
+
 - (LWLayoutSpec *)layoutSpecThatFits:(CGSize)constrainedSize {
-    return nil; //有子类view自己实现
+    return nil; //由子类view自己实现
 }
 
 - (LWLayout *)layoutThatFits:(CGSize)constrainedSize {
@@ -41,13 +74,16 @@
         CGSize size = [self sizeThatFits:constrainedSize];
         return [LWLayout layoutWithLayoutElement:self size:size];
     }
+    self.layoutStyle.specLayoutEnabled = YES;
+
     LWLayout *layout = [layoutSpec layoutThatFits:constrainedSize];
     BOOL isFinalLayoutElement = (layout.layoutElement != self);
     if (isFinalLayoutElement) {
         layout.position = CGPointZero;
         layout = [LWLayout layoutWithLayoutElement:self size:layout.size sublayoutElems:@[layout]];
     }
-    
+    layout = [layout filteredViewLayoutTree];
+    self.caculatedViewLayout = layout;
     return layout;
 }
 

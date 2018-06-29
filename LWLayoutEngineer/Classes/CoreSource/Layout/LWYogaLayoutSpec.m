@@ -10,6 +10,7 @@
 #import "LWAssert.h"
 #import "YogaStyle.h"
 #import "LWYogaUtilities.h"
+#import "UIView+LWLayoutable.h"
 
 @implementation LWYogaLayoutSpec
 
@@ -27,6 +28,9 @@
     NSUInteger i = 0;
     for (id<LWLayoutable> layoutElement in child) {
         LWLayoutEngineerAssert([layoutElement conformsToProtocol:@protocol(LWLayoutable)], @"child must conformsToProtocol LWLayoutable");
+        if ([layoutElement isKindOfClass:[UIView class]]) {
+            [layoutElement.layoutStyle.yogaStyle mergeFromOtherYogaStyle:[(UIView *)layoutElement layoutableThatFits:constrainedSize]];
+        }
         const YGNodeRef childNode = layoutElement.layoutStyle.yogaStyle.yogaNode;
         YGNodeRef parent = YGNodeGetParent(childNode);
         if (parent != NULL) {
@@ -48,6 +52,7 @@
         .height = YGNodeLayoutGetHeight(node)
     };
     LWLayout *layout = [LWLayout layoutWithLayoutElement:layoutElement size:size position:LWPointNull sublayoutElems:[self YGApplyLayoutToSubElement:position]];
+    YGRemoveAllChildren(node);
     YGNodeSetMeasureFunc(node, measure);
     return layout;
 }

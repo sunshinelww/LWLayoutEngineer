@@ -50,6 +50,8 @@ typedef NS_ENUM(NSUInteger, LWLayoutElementType) {
  **/
 @interface LWLayoutStyle : NSObject
 
+@property (nonatomic, assign) BOOL specLayoutEnabled;
+
 @property (nonatomic, assign) CGSize preferredSize; //预设置的大小
 
 @property (nonatomic, assign) CGFloat width;
@@ -64,11 +66,13 @@ typedef NS_ENUM(NSUInteger, LWLayoutElementType) {
 
 @property (nonatomic, assign) CGFloat maxHeight;
 
-@property (nonatomic, strong, nullable) YogaStyle* yogaStyle;
+@property (nonatomic, strong, readonly) YogaStyle* yogaStyle;
 
 @property (nonatomic, weak, readonly) id<LWLayoutable> layoutElement;
 
 - (instancetype)initWithLayoutElement:(id<LWLayoutable>)layoutElem NS_DESIGNATED_INITIALIZER;
+
+- (void)configYogaLayout:(void(^)(YogaStyle *yogaStyle))layoutBlock;
 
 @end
 

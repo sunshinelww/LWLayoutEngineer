@@ -10,6 +10,7 @@
 
 @implementation LWLayoutStyle{
     CGSize _size;
+    YogaStyle *_yogaStyle;
 }
 
 @dynamic width, height, preferredSize;
@@ -58,6 +59,12 @@
         _yogaStyle = [[YogaStyle alloc] initWithLayoutElement:_layoutElement];
     }
     return _yogaStyle;
+}
+
+- (void)configYogaLayout:(void(^)(YogaStyle *yogaStyle))layoutBlock {
+    if (layoutBlock) {
+        layoutBlock(self.yogaStyle);
+    }
 }
 
 @end

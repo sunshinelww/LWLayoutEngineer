@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong)UILabel *label;
 @property (nonatomic, strong)UIImageView *imageView;
+@property (nonatomic, strong)UITextView *descriptionView;
 
 @end
 
@@ -32,6 +33,11 @@
         self.imageView = [[UIImageView alloc] init];
         self.imageView.image = [UIImage imageNamed:@"image_icon"];
         [self addSubview:self.imageView];
+        self.descriptionView = [[UITextView alloc] init];
+        self.descriptionView.text = @"要有最朴素的生活和最遥远的梦想，即使明日天寒地冻、路遥马亡 .";
+        self.descriptionView.font = [UIFont systemFontOfSize:14];
+        [self addSubview:self.descriptionView];
+
     }
     return self;
 }
@@ -39,10 +45,20 @@
 -(LWLayoutSpec *)layoutSpecThatFits:(CGSize)constrainedSize {
     LWYogaLayoutSpec *yogaLayout = [[LWYogaLayoutSpec alloc] init];
     yogaLayout.children = @[self.label, self.imageView];
-    yogaLayout.layoutStyle.yogaStyle.flexDirection = LWFBDirectionRow;
-    yogaLayout.layoutStyle.yogaStyle.alignItems = LWFBAlignItemCenter;
-    
-    return yogaLayout;
+    [self.label.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
+        yogaStyle.marginRight = YGPointValue(10);
+    }];
+    [yogaLayout.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
+        yogaStyle.flexDirection = LWFBDirectionRow;
+        yogaStyle.alignItems = LWFBAlignItemCenter;
+    }];
+    LWYogaLayoutSpec *contentYogaLayout = [[LWYogaLayoutSpec alloc] init];
+    contentYogaLayout.children = @[yogaLayout, self.descriptionView];
+    [contentYogaLayout.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
+        yogaStyle.flexDirection = LWFBDirectionColumn;
+        yogaStyle.alignItems = LWFBAlignItemCenter;
+    }];
+    return contentYogaLayout;
 }
 
 @end

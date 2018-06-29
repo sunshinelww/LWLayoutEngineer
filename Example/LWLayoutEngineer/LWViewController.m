@@ -23,16 +23,23 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.contentView = [[LWLayoutView alloc] init];
+    [self.view addSubview:self.contentView];
     self.contentView.layoutStyle.preferredSize = CGSizeMake(200, 300);
     __weak typeof(self) weakSelf = self;
     self.view.layoutSpecBlock = ^LWLayoutSpec *(CGSize constrainedSize) {
         LWYogaLayoutSpec *layoutSpec = [[LWYogaLayoutSpec alloc] init];
-        layoutSpec.layoutStyle.yogaStyle.flexDirection = LWFBDirectionRow;
-        layoutSpec.layoutStyle.yogaStyle.justifyContent = LWFBJustifyContentCenter;
-        layoutSpec.layoutStyle.yogaStyle.alignItems = LWFBAlignItemCenter;
+        [layoutSpec.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
+            yogaStyle.flexDirection = LWFBDirectionRow;
+            yogaStyle.justifyContent = LWFBJustifyContentCenter;
+            yogaStyle.alignItems = LWFBAlignItemCenter;
+        }];
+
         layoutSpec.child = weakSelf.contentView;
-        weakSelf.contentView.layoutStyle.yogaStyle.width = YGPointValue(200);
-        weakSelf.contentView.layoutStyle.yogaStyle.height = YGPointValue(300);
+        [weakSelf.contentView.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
+            yogaStyle.width = YGPointValue(200);
+            yogaStyle.height = YGPointValue(300);
+        }];
+
         return layoutSpec;
     };
 }
