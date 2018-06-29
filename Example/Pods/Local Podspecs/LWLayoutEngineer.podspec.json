@@ -26,12 +26,12 @@
         "LWLayoutEngineer/Classes/CoreSource/YogaKit/*.h",
         "LWLayoutEngineer/Classes/CoreSource/Layout/*.h"
       ],
-      "source_files": "LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,cpp,m}"
+      "source_files": "LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,cpp,m,mm}"
     },
     {
       "name": "Base",
       "public_header_files": "LWLayoutEngineer/Classes/Base/*.h",
-      "source_files": "LWLayoutEngineer/Classes/Base/*.{h,c,cpp,m}"
+      "source_files": "LWLayoutEngineer/Classes/Base/*.{h,c,cpp,m,mm}"
     }
   ]
 }

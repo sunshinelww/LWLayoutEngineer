@@ -8,6 +8,7 @@
 #import "LWLayout.h"
 #import "LWAssert.h"
 #import <queue>
+#import "LWLayoutUtilities.h"
 
 CGPoint const LWPointNull = {NAN,NAN};
 
@@ -37,6 +38,7 @@ static inline BOOL LWLayoutIsFlattened(LWLayout *layout)
 @interface LWLayout()
 
 @property (nonatomic, strong) NSMapTable *elementToRectMap;
+@property (nonatomic, strong) NSMutableArray<id<LWLayoutable>> *subLayoutElements;
 
 @end
 
@@ -127,13 +129,35 @@ static inline BOOL LWLayoutIsFlattened(LWLayout *layout)
         queue.pop_front();
         
         LWLayout *layout = context.layout;
-        const NSArray<LWLayout *> *subLayout = layout.subLayouts;
+        const NSArray<LWLayout *> *subLayouts = layout.subLayouts;
         const CGPoint absolutePosition = context.absolutePosition;
         
         if (LWLayoutIsViewType(layout)) { //如果是view
-            
-        } else if (subLayout.count > 0) { //是Specs
-            
+            if (subLayouts.count > 0) {
+                layout = [LWLayout layoutWithLayoutElement:layout.layoutElement size:layout.size position:absolutePosition sublayoutElems:@[]];
+            }
+            [flatternedSublayouts addObject:layout];
+        } else if (subLayouts.count > 0) { //是Specs
+            std::vector<LayoutContext> subLayoutContexts;
+            for (LWLayout *subLayout in subLayouts) {
+                subLayoutContexts.push_back({.layout = subLayout, .absolutePosition = (absolutePosition + subLayout.position)});
+            }
+            queue.insert(queue.begin(), subLayoutContexts.begin(), subLayoutContexts.end());
+        }
+    }
+    
+    LWLayout *layout = [LWLayout layoutWithLayoutElement:_layoutElement size:_size sublayoutElems:flatternedSublayouts];
+    [self retainSublayoutLayoutElements];
+    return layout;
+}
+
+//强引用subLayouts的layouElement,由于Layout对layoutElement的引用是弱引用,避免在layoutSubSpecs中被创建的element被释放
+- (void)retainSublayoutLayoutElements {
+    NSUInteger subLayoutCount = self.subLayouts.count;
+    if (subLayoutCount > 0) {
+        self.subLayoutElements = [NSMutableArray array];
+        for (LWLayout *subLayout in self.subLayouts) {
+            [self.subLayoutElements addObject:subLayout.layoutElement];
         }
     }
 }

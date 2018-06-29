@@ -13,6 +13,7 @@
 #import "LWAssert.h"
 #import "LWDefines.h"
 #import "LWInternalHelper.h"
+#import "LWLayoutUtilities.h"
 #import "Utils.h"
 #import "YGEnums.h"
 #import "YGFloatOptional.h"

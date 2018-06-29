@@ -36,14 +36,14 @@ TODO: Add long description of the pod here.
         'LWLayoutEngineer/Classes/CoreSource/YogaKit/*.h',
         'LWLayoutEngineer/Classes/CoreSource/Layout/*.h',
       ]
-      core.source_files = 'LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,cpp,m}'
+      core.source_files = 'LWLayoutEngineer/Classes/CoreSource/**/*.{h,c,cpp,m,mm}'
   end
 
   s.subspec 'Base' do |base|
   	base.public_header_files = 'LWLayoutEngineer/Classes/Base/*.h'
-  	base.source_files = 'LWLayoutEngineer/Classes/Base/*.{h,c,cpp,m}'
+  	base.source_files = 'LWLayoutEngineer/Classes/Base/*.{h,c,cpp,m,mm}'
   end
-  
+
   # s.resource_bundles = {
   #   'LWLayoutEngineer' => ['LWLayoutEngineer/Assets/*.png']
   # }

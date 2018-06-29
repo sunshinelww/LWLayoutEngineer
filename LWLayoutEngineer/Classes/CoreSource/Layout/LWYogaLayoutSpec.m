@@ -20,6 +20,10 @@
     }
     YGNodeRef node = self.layoutStyle.yogaStyle.yogaNode;
     YGRemoveAllChildren(node);
+    YGMeasureFunc measure = YGNodeGetMeasureFunc(node);
+    if (measure) {
+        YGNodeSetMeasureFunc(node, nil);
+    }
     NSUInteger i = 0;
     for (id<LWLayoutable> layoutElement in child) {
         LWLayoutEngineerAssert([layoutElement conformsToProtocol:@protocol(LWLayoutable)], @"child must conformsToProtocol LWLayoutable");
@@ -43,7 +47,9 @@
         .width = YGNodeLayoutGetWidth(node),
         .height = YGNodeLayoutGetHeight(node)
     };
-    return [LWLayout layoutWithLayoutElement:layoutElement size:size position:LWPointNull sublayoutElems:[self YGApplyLayoutToSubElement:position]];
+    LWLayout *layout = [LWLayout layoutWithLayoutElement:layoutElement size:size position:LWPointNull sublayoutElems:[self YGApplyLayoutToSubElement:position]];
+    YGNodeSetMeasureFunc(node, measure);
+    return layout;
 }
 
 - (NSArray<LWLayout *> *)YGApplyLayoutToSubElement:(CGPoint)origin {
@@ -53,8 +59,8 @@
         const YGNodeRef childNode = layoutElement.layoutStyle.yogaStyle.yogaNode;
         LWLayout *layout = [layoutElement layoutThatFits:CGSizeMake(YGNodeLayoutGetWidth(childNode), YGNodeLayoutGetHeight(childNode))];
         layout.position = (CGPoint) {
-            .x = YGNodeLayoutGetTop(childNode) + origin.x,
-            .y = YGNodeLayoutGetLeft(childNode) + origin.y
+            .x = YGNodeLayoutGetLeft(childNode) + origin.x,
+            .y = YGNodeLayoutGetTop(childNode) + origin.y
         };
         [subLayout addObject:layout];
     }
