@@ -1563,6 +1563,7 @@ static void YGNodeWithMeasureFuncSetMeasuredDimensions(const YGNodeRef node,
             parentHeight,
             parentWidth),
         YGDimensionHeight);
+      node->getMeasure()(node, innerWidth, widthMeasureMode, innerHeight, heightMeasureMode);//这里trick下，由于spec布局的laythatFits:必须要被触发
   } else {
     // Measure the text under the current constraints.
     const YGSize measuredSize = node->getMeasure()(
