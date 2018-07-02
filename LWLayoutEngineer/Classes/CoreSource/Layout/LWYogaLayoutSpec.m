@@ -146,7 +146,7 @@ static void YGMeasureDecisionImpl(YGNodeRef node,
 
             LWViewSpec *viewSpec = [[LWViewSpec alloc] initWithView:(UIView *)layoutElement layoutSpec:(LWYogaLayoutSpec *)spec];//构建view和spec的对应关系
             YGNodeSetContext(node, (__bridge_retained void*)viewSpec); //将spec的yogaNode添加到yoga树
-            [layoutElement.layoutStyle.yogaStyle mergeFromOtherYogaStyle:spec.layoutStyle.yogaStyle]; //将spec的yoga属性应用到view的node上面
+            [layoutElement.layoutStyle.yogaStyle mergeFromOtherYogaStyle:spec.layoutStyle.yogaStyle]; //将spec的yoga属性应用到view的node上面，这里会覆盖view.yoga设置的属性
             layoutElement.layoutStyle.specLayoutEnabled = YES;
         } else {
             YGNodeSetMeasureFunc(node, YGMeasureView);
@@ -155,8 +155,8 @@ static void YGMeasureDecisionImpl(YGNodeRef node,
         NSArray *child = ((LWYogaLayoutSpec *)layoutElement).children;
         YGRemoveAllChildren(node);
         uint32_t i = 0;
-        for (id<LWLayoutable> layoutElement in child) {
-            YGNodeRef childNode = layoutElement.layoutStyle.yogaStyle.yogaNode;
+        for (id<LWLayoutable> childLayoutElement in child) {
+            YGNodeRef childNode = childLayoutElement.layoutStyle.yogaStyle.yogaNode;
             YGNodeRef parent = YGNodeGetParent(childNode);
             if (parent != NULL) {
                 YGNodeRemoveChild(parent, childNode);

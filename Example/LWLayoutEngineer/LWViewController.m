@@ -35,11 +35,6 @@
         }];
 
         layoutSpec.child = weakSelf.contentView;
-//        [weakSelf.contentView.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
-//            yogaStyle.width = YGPointValue(300);
-//            yogaStyle.height = YGPointValue(300);
-//        }];
-
         return layoutSpec;
     };
 }

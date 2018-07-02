@@ -58,7 +58,7 @@
     [contentYogaLayout.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
         yogaStyle.flexDirection = LWFBDirectionColumn;
         yogaStyle.alignItems = LWFBAlignItemCenter;
-        yogaStyle.justifyContent = LWFBJustifyContentCenter;
+        yogaStyle.justifyContent = LWFBJustifyContentSpaceAround;
         yogaStyle.width = YGPointValue(300);
         yogaStyle.height = YGPointValue(300);
     }];
