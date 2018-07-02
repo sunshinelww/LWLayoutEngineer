@@ -70,7 +70,7 @@
 
 - (LWLayout *)layoutThatFits:(CGSize)constrainedSize {
     LWLayoutSpec *layoutSpec = [self layoutableThatFits:constrainedSize];
-    if (!layoutSpec) { //  没有使用layoutSpec，那么采用手动布局
+    if (!layoutSpec) { //  没有使用layoutSpec，那么采用普通布局
         CGSize size = [self sizeThatFits:constrainedSize];
         return [LWLayout layoutWithLayoutElement:self size:size];
     }

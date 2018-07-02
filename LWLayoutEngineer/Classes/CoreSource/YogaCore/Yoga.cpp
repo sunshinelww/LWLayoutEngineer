@@ -1801,6 +1801,15 @@ static void YGNodeComputeFlexBasisForChildren(
   }
 
   for (auto child : children) {
+      if (child->getMeasureDecision() != nullptr) { //在这里设置根据child的类型为其设置对应的计算规则
+          YGNodeWithMeasureDecisionFuncSetMeasuredFunc(child,
+                                                       availableInnerWidth,
+                                                       availableInnerHeight,
+                                                       widthMeasureMode,
+                                                       heightMeasureMode,
+                                                       availableInnerWidth,
+                                                       availableInnerHeight);
+    }
     child->resolveDimension();
     if (child->getStyle().display == YGDisplayNone) {
       YGZeroOutLayoutRecursivly(child);
@@ -2583,15 +2592,6 @@ static void YGNodelayoutImpl(const YGNodeRef node,
   node->setLayoutPadding(
       node->getTrailingPadding(flexColumnDirection, parentWidth), YGEdgeBottom);
 
-  if (node->getMeasureDecision() != nullptr) {
-      YGNodeWithMeasureDecisionFuncSetMeasuredFunc(node,
-                                                 availableWidth,
-                                                 availableHeight,
-                                                 widthMeasureMode,
-                                                 heightMeasureMode,
-                                                 parentWidth,
-                                                 parentHeight);
-  }
   if (node->getMeasure() != nullptr) {
     YGNodeWithMeasureFuncSetMeasuredDimensions(node,
                                                availableWidth,
@@ -3915,19 +3915,6 @@ void YGNodeCalculateLayout(
     YGConfigFreeRecursive(originalNode);
     YGNodeFreeRecursive(originalNode);
   }
-}
-
-void YGNodeCalculateChildLayout(
-                           const YGNodeRef node,
-                           const float childWidth,
-                           const float childHeight,
-                           const YGMeasureMode widthMeasureMode,
-                           const YGMeasureMode heightMeasureMode,
-                           const float parentWidth,
-                           const float parentHeight,
-                           const YGDirection parentDirection) {
-    
-    
 }
 
 void YGConfigSetLogger(const YGConfigRef config, YGLogger logger) {

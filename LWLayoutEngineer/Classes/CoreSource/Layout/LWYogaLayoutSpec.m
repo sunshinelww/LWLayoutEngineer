@@ -43,7 +43,7 @@
     }
     YGNodeRef node = self.layoutStyle.yogaStyle.yogaNode;
     YGRemoveAllChildren(node);
-    NSUInteger i = 0;
+    uint32_t i = 0;
     for (id<LWLayoutable> layoutElement in child) {
         LWLayoutEngineerAssert([layoutElement conformsToProtocol:@protocol(LWLayoutable)], @"child must conformsToProtocol LWLayoutable");
         YGNodeRef childNode = layoutElement.layoutStyle.yogaStyle.yogaNode;
@@ -74,12 +74,12 @@
     if (!rootNode) {
         return @[];
     }
-    NSUInteger count = YGNodeGetChildCount(rootNode);
+    uint32_t count = YGNodeGetChildCount(rootNode);
     if (count == 0) {
         return @[];
     }
     NSMutableArray *subLayout = [NSMutableArray array];
-    for (NSUInteger i = 0; i < count; i++) {
+    for (uint32_t i = 0; i < count; i++) {
         YGNodeRef node = YGNodeGetChild(rootNode, i);
         id context = (__bridge id)YGNodeGetContext(node);
         LWLayout *layout = nil;
@@ -129,11 +129,11 @@ static void YGMeasureDecisionImpl(YGNodeRef node,
             .height = constrainedHeight,
         }]; //获取view的spec
         if ([spec isKindOfClass:[LWYogaLayoutSpec class]]) { //view是yoga容器
-            NSArray *child = spec.children;
+            NSArray *children = spec.children;
             YGRemoveAllChildren(node);
             uint32_t i = 0;
-            for (id<LWLayoutable> layoutElement in child) {
-                YGNodeRef childNode = layoutElement.layoutStyle.yogaStyle.yogaNode;
+            for (id<LWLayoutable> childLayoutElement in children) {
+                YGNodeRef childNode = childLayoutElement.layoutStyle.yogaStyle.yogaNode;
                 YGNodeRef parent = YGNodeGetParent(childNode);
                 if (parent != NULL) {
                     YGNodeRemoveChild(parent, childNode);
@@ -143,10 +143,10 @@ static void YGMeasureDecisionImpl(YGNodeRef node,
                 YGNodeInsertChild(node, childNode, i);
                 i++;
             }
-            //构建view和spec的对应关系
-            LWViewSpec *viewSpec = [[LWViewSpec alloc] initWithView:(UIView *)layoutElement layoutSpec:(LWYogaLayoutSpec *)spec];
-            //将spec的yogaNode添加到yoga树
-            YGNodeSetContext(node, (__bridge_retained void*)viewSpec);
+
+            LWViewSpec *viewSpec = [[LWViewSpec alloc] initWithView:(UIView *)layoutElement layoutSpec:(LWYogaLayoutSpec *)spec];//构建view和spec的对应关系
+            YGNodeSetContext(node, (__bridge_retained void*)viewSpec); //将spec的yogaNode添加到yoga树
+            [layoutElement.layoutStyle.yogaStyle mergeFromOtherYogaStyle:spec.layoutStyle.yogaStyle]; //将spec的yoga属性应用到view的node上面
             layoutElement.layoutStyle.specLayoutEnabled = YES;
         } else {
             YGNodeSetMeasureFunc(node, YGMeasureView);
