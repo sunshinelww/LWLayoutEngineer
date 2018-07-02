@@ -27,7 +27,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.label = [[UILabel alloc] init];
-        self.label.text = @"Hello kitty!!";
+        self.label.text = @"Hello liweiwei.sunshine!!";
         self.label.font = [UIFont systemFontOfSize:14];
         [self addSubview:self.label];
         self.imageView = [[UIImageView alloc] init];
@@ -44,21 +44,21 @@
 
 -(LWLayoutSpec *)layoutSpecThatFits:(CGSize)constrainedSize {
     LWYogaLayoutSpec *yogaLayout = [[LWYogaLayoutSpec alloc] init];
-    yogaLayout.children = @[self.label, self.imageView];
+    yogaLayout.children = @[self.imageView, self.label];
     [self.label.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
-        yogaStyle.marginRight = YGPointValue(10);
+        yogaStyle.marginLeft = YGPointValue(30);
+        yogaStyle.flexGrow = 1.0f;
     }];
     [yogaLayout.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
         yogaStyle.flexDirection = LWFBDirectionRow;
-        yogaStyle.justifyContent = LWFBJustifyContentCenter;
         yogaStyle.alignItems = LWFBAlignItemCenter;
+        yogaStyle.marginBottom = YGPointValue(30);
     }];
     LWYogaLayoutSpec *contentYogaLayout = [[LWYogaLayoutSpec alloc] init];
     contentYogaLayout.children = @[yogaLayout, self.descriptionView];
     [contentYogaLayout.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
         yogaStyle.flexDirection = LWFBDirectionColumn;
         yogaStyle.alignItems = LWFBAlignItemCenter;
-        yogaStyle.justifyContent = LWFBJustifyContentSpaceAround;
         yogaStyle.width = YGPointValue(300);
         yogaStyle.height = YGPointValue(300);
     }];
