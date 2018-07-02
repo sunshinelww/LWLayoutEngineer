@@ -18,6 +18,7 @@ struct YGNode {
   bool hasNewLayout_;
   YGNodeType nodeType_;
   YGMeasureFunc measure_;
+  YGMeasureDecision measureDecision_;
   YGBaselineFunc baseline_;
   YGDirtiedFunc dirtied_;
   YGStyle style_;
@@ -62,6 +63,7 @@ struct YGNode {
   bool getHasNewLayout() const;
   YGNodeType getNodeType() const;
   YGMeasureFunc getMeasure() const;
+  YGMeasureDecision getMeasureDecision() const;
   YGBaselineFunc getBaseline() const;
   YGDirtiedFunc getDirtied() const;
   // For Performance reasons passing as reference.
@@ -104,6 +106,7 @@ struct YGNode {
   void setHasNewLayout(bool hasNewLayout);
   void setNodeType(YGNodeType nodeTye);
   void setMeasureFunc(YGMeasureFunc measureFunc);
+    void setMeasureDescisionFunc(YGMeasureDecision measureDesicionFunc);
   void setBaseLineFunc(YGBaselineFunc baseLineFunc);
   void setDirtiedFunc(YGDirtiedFunc dirtiedFunc);
   void setStyle(const YGStyle& style);

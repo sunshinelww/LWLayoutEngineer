@@ -177,6 +177,14 @@ void YGNodeSetMeasureFunc(YGNodeRef node, YGMeasureFunc measureFunc) {
   node->setMeasureFunc(measureFunc);
 }
 
+YGMeasureDecision YGNodeGetDecisionFunc(YGNodeRef node) {
+    return node->getMeasureDecision();
+}
+
+void YGNodeSetDecisionFunc(YGNodeRef node, YGMeasureDecision decisionFunc) {
+    node->setMeasureDescisionFunc(decisionFunc);
+}
+
 YGBaselineFunc YGNodeGetBaselineFunc(YGNodeRef node) {
   return node->getBaseline();
 }
@@ -1586,6 +1594,38 @@ static void YGNodeWithMeasureFuncSetMeasuredDimensions(const YGNodeRef node,
   }
 }
 
+static void YGNodeWithMeasureDecisionFuncSetMeasuredFunc(const YGNodeRef node,
+                                                         const float availableWidth,
+                                                         const float availableHeight,
+                                                         const YGMeasureMode widthMeasureMode,
+                                                         const YGMeasureMode heightMeasureMode,
+                                                         const float parentWidth,
+                                                         const float parentHeight) {
+    YGAssertWithNode(
+                     node,
+                     node->getMeasureDecision() != nullptr,
+                     "Expected node to have custom measure decision function");
+    
+    const float paddingAndBorderAxisRow =
+    YGNodePaddingAndBorderForAxis(node, YGFlexDirectionRow, availableWidth);
+    const float paddingAndBorderAxisColumn =
+    YGNodePaddingAndBorderForAxis(node, YGFlexDirectionColumn, availableWidth);
+    const float marginAxisRow =
+    node->getMarginForAxis(YGFlexDirectionRow, availableWidth);
+    const float marginAxisColumn =
+    node->getMarginForAxis(YGFlexDirectionColumn, availableWidth);
+    
+    // We want to make sure we don't call measure with negative size
+    const float innerWidth = YGFloatIsUndefined(availableWidth)
+    ? availableWidth
+    : YGFloatMax(0, availableWidth - marginAxisRow - paddingAndBorderAxisRow);
+    const float innerHeight = YGFloatIsUndefined(availableHeight)
+    ? availableHeight
+    : YGFloatMax(
+                 0, availableHeight - marginAxisColumn - paddingAndBorderAxisColumn);
+    node->getMeasureDecision()(node, innerWidth, widthMeasureMode, innerHeight, heightMeasureMode);
+}
+
 // For nodes with no children, use the available values if they were provided,
 // or the minimum size as indicated by the padding and border sizes.
 static void YGNodeEmptyContainerSetMeasuredDimensions(const YGNodeRef node,
@@ -2543,6 +2583,15 @@ static void YGNodelayoutImpl(const YGNodeRef node,
   node->setLayoutPadding(
       node->getTrailingPadding(flexColumnDirection, parentWidth), YGEdgeBottom);
 
+  if (node->getMeasureDecision() != nullptr) {
+      YGNodeWithMeasureDecisionFuncSetMeasuredFunc(node,
+                                                 availableWidth,
+                                                 availableHeight,
+                                                 widthMeasureMode,
+                                                 heightMeasureMode,
+                                                 parentWidth,
+                                                 parentHeight);
+  }
   if (node->getMeasure() != nullptr) {
     YGNodeWithMeasureFuncSetMeasuredDimensions(node,
                                                availableWidth,
@@ -3866,6 +3915,19 @@ void YGNodeCalculateLayout(
     YGConfigFreeRecursive(originalNode);
     YGNodeFreeRecursive(originalNode);
   }
+}
+
+void YGNodeCalculateChildLayout(
+                           const YGNodeRef node,
+                           const float childWidth,
+                           const float childHeight,
+                           const YGMeasureMode widthMeasureMode,
+                           const YGMeasureMode heightMeasureMode,
+                           const float parentWidth,
+                           const float parentHeight,
+                           const YGDirection parentDirection) {
+    
+    
 }
 
 void YGConfigSetLogger(const YGConfigRef config, YGLogger logger) {

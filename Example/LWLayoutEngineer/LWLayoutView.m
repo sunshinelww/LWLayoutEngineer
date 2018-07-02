@@ -50,6 +50,7 @@
     }];
     [yogaLayout.layoutStyle configYogaLayout:^(YogaStyle * _Nonnull yogaStyle) {
         yogaStyle.flexDirection = LWFBDirectionRow;
+        yogaStyle.justifyContent = LWFBJustifyContentCenter;
         yogaStyle.alignItems = LWFBAlignItemCenter;
     }];
     LWYogaLayoutSpec *contentYogaLayout = [[LWYogaLayoutSpec alloc] init];

@@ -54,6 +54,11 @@ typedef YGSize (*YGMeasureFunc)(YGNodeRef node,
                                 YGMeasureMode widthMode,
                                 float height,
                                 YGMeasureMode heightMode);
+typedef void (*YGMeasureDecision)(YGNodeRef node,
+                                  float width,
+                                  YGMeasureMode widthMode,
+                                  float height,
+                                  YGMeasureMode heightMode);
 typedef float (*YGBaselineFunc)(YGNodeRef node, const float width, const float height);
 typedef void (*YGDirtiedFunc)(YGNodeRef node);
 typedef void (*YGPrintFunc)(YGNodeRef node);
@@ -168,6 +173,8 @@ void* YGNodeGetContext(YGNodeRef node);
 void YGNodeSetContext(YGNodeRef node, void* context);
 YGMeasureFunc YGNodeGetMeasureFunc(YGNodeRef node);
 void YGNodeSetMeasureFunc(YGNodeRef node, YGMeasureFunc measureFunc);
+YGMeasureDecision YGNodeGetDecisionFunc(YGNodeRef node);
+void YGNodeSetDecisionFunc(YGNodeRef node, YGMeasureDecision decisionFunc);
 YGBaselineFunc YGNodeGetBaselineFunc(YGNodeRef node);
 void YGNodeSetBaselineFunc(YGNodeRef node, YGBaselineFunc baselineFunc);
 YGDirtiedFunc YGNodeGetDirtiedFunc(YGNodeRef node);

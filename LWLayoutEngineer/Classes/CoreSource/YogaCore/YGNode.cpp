@@ -29,6 +29,10 @@ YGMeasureFunc YGNode::getMeasure() const {
   return measure_;
 }
 
+YGMeasureDecision YGNode::getMeasureDecision() const {
+    return measureDecision_;
+}
+
 YGBaselineFunc YGNode::getBaseline() const {
   return baseline_;
 }
@@ -217,6 +221,10 @@ void YGNode::setMeasureFunc(YGMeasureFunc measureFunc) {
   measure_ = measureFunc;
 }
 
+void YGNode::setMeasureDescisionFunc(YGMeasureDecision measureDesicionFunc) {
+    measureDecision_ = measureDesicionFunc;
+}
+
 void YGNode::setBaseLineFunc(YGBaselineFunc baseLineFunc) {
   baseline_ = baseLineFunc;
 }
@@ -380,6 +388,7 @@ YGNode::YGNode()
       hasNewLayout_(true),
       nodeType_(YGNodeTypeDefault),
       measure_(nullptr),
+      measureDecision_(nullptr),
       baseline_(nullptr),
       dirtied_(nullptr),
       style_(YGStyle()),
@@ -398,6 +407,7 @@ YGNode::YGNode(const YGNode& node)
       hasNewLayout_(node.hasNewLayout_),
       nodeType_(node.nodeType_),
       measure_(node.measure_),
+      measureDecision_(node.measureDecision_),
       baseline_(node.baseline_),
       dirtied_(node.dirtied_),
       style_(node.style_),

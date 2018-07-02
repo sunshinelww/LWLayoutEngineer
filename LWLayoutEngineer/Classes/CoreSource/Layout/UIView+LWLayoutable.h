@@ -24,6 +24,8 @@ typedef LWLayoutSpec *(^LWLayoutSpecBlock)(CGSize constrainedSize);
 
 - (LWLayoutSpec *)layoutableThatFits:(CGSize)constrainedSize;
 
+- (void)setLayout:(LWLayout *)layout;
+
 @end
 
 NS_ASSUME_NONNULL_END

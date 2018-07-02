@@ -87,6 +87,11 @@
     return layout;
 }
 
+- (void)setLayout:(LWLayout *)layout {
+    layout = [layout filteredViewLayoutTree];
+    self.caculatedViewLayout = layout;
+}
+
 - (LWLayoutSpec *)layoutableThatFits:(CGSize)constrainedSize {
     if (self.layoutSpecBlock != nil) {
         return self.layoutSpecBlock(constrainedSize);
